@@ -42,6 +42,27 @@ const PRODUCTS = {
     stripeLink: 'https://buy.stripe.com/aFabJ1ehu0mDcmc8DmaIM03',
     etsyLink: 'https://www.etsy.com/listing/4477274179/solid-walnut-kids-tool-set-montessori',
   },
+  'animal-figures': {
+    title: 'Solid Hardwood Animal Figure Set',
+    material: 'Hard Maple · Black Walnut',
+    price: '$39.00',
+    priceNote: 'Set of 5 — Chick, Fox, Frog, Koala, Hippo',
+    images: [
+      'https://i.etsystatic.com/64682766/r/il/54f3db/7902191609/il_fullxfull.7902191609_nt5v.jpg',
+      'https://i.etsystatic.com/64682766/r/il/09b445/7902191379/il_fullxfull.7902191379_cu2d.jpg',
+      'https://i.etsystatic.com/64682766/r/il/e9ccdc/7902191479/il_fullxfull.7902191479_opcr.jpg',
+    ],
+    description: 'Five animals. Zero plastic. Just solid hardwood shaped into the creatures kids actually care about.\n\nIncludes a set of 5: Chick, Fox, Frog, Koala, and Hippo. Each figure cut from 100% solid hardwood — your choice of hard maple or dark walnut. Both are the same price because a good hippo shouldn\'t cost more in walnut.\n\nNo plywood. No paint. No mystery coating. Just real wood with a smooth finish that\'s safe for little hands and looks genuinely good on a nursery shelf.\n\nTwo toys in one — line them up on a shelf and they look like intentional décor. Hand them to a toddler and they become whatever story is happening right now.',
+    specs: [
+      'Set of 5 figures — Chick, Fox, Frog, Koala, Hippo',
+      'Choice of Hard Maple (light) or Black Walnut (dark)',
+      '100% solid hardwood — no plywood, no paint',
+      'Food-safe oil finish — non-toxic, baby safe',
+      'Made to order in Raleigh, NC · Allow 3–5 business days',
+      'Free shipping · Returns accepted within 30 days',
+    ],
+    etsyLink: 'https://www.etsy.com/listing/4479421053/solid-hardwood-animal-figure-set',
+  },
   'building-blocks': {
     title: 'Solid Walnut & Maple Building Blocks',
     material: 'Solid Walnut + Maple',
