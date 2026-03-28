@@ -202,6 +202,45 @@ const PRODUCTS = {
 };
 
 // ── Product Modal ───────────────────────────────────────────────
+let modalImages = [];
+let modalIndex  = 0;
+
+function setModalImage(i) {
+  modalIndex = (i + modalImages.length) % modalImages.length;
+  const mainImg  = document.getElementById('modalMainImg');
+  const thumbsEl = document.getElementById('modalThumbs');
+  mainImg.style.opacity = '0';
+  setTimeout(() => { mainImg.src = modalImages[modalIndex]; mainImg.style.opacity = '1'; }, 150);
+  thumbsEl.querySelectorAll('.modal-thumb').forEach((t, idx) => t.classList.toggle('active', idx === modalIndex));
+  const counter = document.getElementById('lightboxCounter');
+  if (counter) counter.textContent = `${modalIndex + 1} / ${modalImages.length}`;
+}
+
+function openLightbox() {
+  const lb  = document.getElementById('galleryLightbox');
+  const img = document.getElementById('lightboxImg');
+  img.src = modalImages[modalIndex];
+  const counter = document.getElementById('lightboxCounter');
+  if (counter) counter.textContent = `${modalIndex + 1} / ${modalImages.length}`;
+  lb.classList.add('open');
+}
+
+function closeLightbox() {
+  document.getElementById('galleryLightbox').classList.remove('open');
+}
+
+function setLightboxImage(i) {
+  modalIndex = (i + modalImages.length) % modalImages.length;
+  const img = document.getElementById('lightboxImg');
+  img.style.opacity = '0';
+  setTimeout(() => { img.src = modalImages[modalIndex]; img.style.opacity = '1'; }, 120);
+  const counter = document.getElementById('lightboxCounter');
+  if (counter) counter.textContent = `${modalIndex + 1} / ${modalImages.length}`;
+  // sync modal thumb
+  document.getElementById('modalThumbs').querySelectorAll('.modal-thumb')
+    .forEach((t, idx) => t.classList.toggle('active', idx === modalIndex));
+}
+
 function openModal(productId) {
   const p = PRODUCTS[productId];
   if (!p) return;
@@ -215,21 +254,32 @@ function openModal(productId) {
   const descEl    = document.getElementById('modalDescription');
   const specsEl   = document.getElementById('modalSpecs');
   const actionsEl = document.getElementById('modalActions');
+  const galleryMain = document.getElementById('modalGalleryMain');
 
-  // Populate
+  // Gallery state
+  modalImages = p.images;
+  modalIndex  = 0;
+
+  // Populate text
   matEl.textContent   = p.material;
   titleEl.textContent = p.title;
   descEl.textContent  = p.description;
-
-  // Price
-  priceEl.innerHTML = `<span>${p.price}</span>`;
-  if (p.priceNote) {
-    priceEl.innerHTML += `<div class="modal-price-note">${p.priceNote}</div>`;
-  }
+  priceEl.innerHTML   = `<span>${p.price}</span>`;
+  if (p.priceNote) priceEl.innerHTML += `<div class="modal-price-note">${p.priceNote}</div>`;
 
   // Main image
   mainImg.src = p.images[0];
   mainImg.alt = p.title;
+  mainImg.style.opacity = '1';
+
+  // Arrow buttons (only show when >1 image)
+  const prevBtn = document.getElementById('galleryPrev');
+  const nextBtn = document.getElementById('galleryNext');
+  if (prevBtn && nextBtn) {
+    const show = p.images.length > 1;
+    prevBtn.style.display = show ? '' : 'none';
+    nextBtn.style.display = show ? '' : 'none';
+  }
 
   // Thumbs
   thumbsEl.innerHTML = '';
@@ -238,15 +288,7 @@ function openModal(productId) {
       const div = document.createElement('div');
       div.className = 'modal-thumb' + (i === 0 ? ' active' : '');
       div.innerHTML = `<img src="${src}" alt="${p.title} view ${i+1}" loading="lazy" />`;
-      div.addEventListener('click', () => {
-        mainImg.style.opacity = '0';
-        setTimeout(() => {
-          mainImg.src = src;
-          mainImg.style.opacity = '1';
-        }, 150);
-        thumbsEl.querySelectorAll('.modal-thumb').forEach(t => t.classList.remove('active'));
-        div.classList.add('active');
-      });
+      div.addEventListener('click', () => setModalImage(i));
       thumbsEl.appendChild(div);
     });
   }
@@ -279,37 +321,88 @@ function openModal(productId) {
 }
 
 function closeModal() {
-  const overlay = document.getElementById('productModal');
-  overlay.classList.remove('open');
+  document.getElementById('productModal').classList.remove('open');
   document.body.style.overflow = '';
+}
+
+// Swipe helper
+function addSwipe(el, onLeft, onRight) {
+  let startX = null;
+  el.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  el.addEventListener('touchend',   e => {
+    if (startX === null) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) { dx < 0 ? onLeft() : onRight(); }
+    startX = null;
+  });
+  let dragX = null;
+  el.addEventListener('mousedown', e => { dragX = e.clientX; });
+  el.addEventListener('mouseup',   e => {
+    if (dragX === null) return;
+    const dx = e.clientX - dragX;
+    if (Math.abs(dx) > 40) { dx < 0 ? onLeft() : onRight(); }
+    dragX = null;
+  });
 }
 
 // Wire up card clicks
 document.addEventListener('DOMContentLoaded', () => {
+  // Inject lightbox HTML
+  const lb = document.createElement('div');
+  lb.id = 'galleryLightbox';
+  lb.className = 'gallery-lightbox';
+  lb.innerHTML = `
+    <button class="gallery-lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox-arrow lightbox-arrow-prev" id="lightboxPrev" aria-label="Previous">&#8592;</button>
+    <img class="gallery-lightbox-img" id="lightboxImg" src="" alt="" />
+    <button class="lightbox-arrow lightbox-arrow-next" id="lightboxNext" aria-label="Next">&#8594;</button>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+  `;
+  document.body.appendChild(lb);
+
+  // Lightbox controls
+  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+  document.getElementById('lightboxPrev').addEventListener('click', () => setLightboxImage(modalIndex - 1));
+  document.getElementById('lightboxNext').addEventListener('click', () => setLightboxImage(modalIndex + 1));
+  lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+  addSwipe(lb, () => setLightboxImage(modalIndex + 1), () => setLightboxImage(modalIndex - 1));
+
+  // Modal gallery arrow buttons + click to open lightbox
+  const galleryMain = document.getElementById('modalGalleryMain');
+  if (galleryMain) {
+    document.getElementById('galleryPrev').addEventListener('click', e => { e.stopPropagation(); setModalImage(modalIndex - 1); });
+    document.getElementById('galleryNext').addEventListener('click', e => { e.stopPropagation(); setModalImage(modalIndex + 1); });
+    galleryMain.addEventListener('click', () => { if (modalImages.length) openLightbox(); });
+    addSwipe(galleryMain, () => setModalImage(modalIndex + 1), () => setModalImage(modalIndex - 1));
+  }
+
+  // Product card clicks
   document.querySelectorAll('.product-card[data-id]').forEach(card => {
     card.addEventListener('click', () => openModal(card.dataset.id));
     card.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        openModal(card.dataset.id);
-      }
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card.dataset.id); }
     });
     card.setAttribute('tabindex', '0');
     card.setAttribute('role', 'button');
   });
 
-  // Close on overlay click
+  // Close modal on overlay click / button / Escape
   const overlay = document.getElementById('productModal');
   if (overlay) {
-    overlay.addEventListener('click', e => {
-      if (e.target === overlay) closeModal();
-    });
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
     document.getElementById('modalClose').addEventListener('click', closeModal);
   }
 
-  // Close on Escape
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeModal();
+    if (e.key === 'Escape') { closeLightbox(); closeModal(); }
+    const lbOpen = document.getElementById('galleryLightbox')?.classList.contains('open');
+    if (lbOpen) {
+      if (e.key === 'ArrowLeft')  setLightboxImage(modalIndex - 1);
+      if (e.key === 'ArrowRight') setLightboxImage(modalIndex + 1);
+    } else if (document.getElementById('productModal')?.classList.contains('open')) {
+      if (e.key === 'ArrowLeft')  setModalImage(modalIndex - 1);
+      if (e.key === 'ArrowRight') setModalImage(modalIndex + 1);
+    }
   });
 });
 
