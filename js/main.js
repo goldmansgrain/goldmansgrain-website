@@ -143,14 +143,16 @@ const PRODUCTS = {
     etsyLink: 'https://www.etsy.com/listing/4470546400/custom-solid-maple-wood-standing-name',
   },
   'bunny-napkin': {
-    title: 'Solid Walnut Bunny Napkin Holder',
+    title: 'Solid Walnut Bunny Napkin Holder — Set of 4',
     material: 'Solid Walnut',
-    price: '$22.00',
+    price: '$29.00',
+    priceNote: 'Set of 4 napkin holders',
     images: [
       'https://i.etsystatic.com/64682766/r/il/25a5ac/7876051219/il_fullxfull.7876051219_2iq4.jpg',
     ],
-    description: 'Easter table decor and farmhouse kitchen accessory. A charming walnut bunny silhouette that holds napkins in style — seasonally cute, perennially useful.\n\nSolid walnut with a natural oil finish. Cute enough to leave out year-round.',
+    description: 'Easter table decor and farmhouse kitchen accessory. A charming walnut bunny silhouette that holds napkins in style — seasonally cute, perennially useful.\n\nComes as a set of 4. Solid walnut with a natural oil finish. Cute enough to leave out year-round.',
     specs: [
+      'Set of 4 napkin holders',
       '100% Solid Walnut Hardwood',
       'Food-safe oil finish',
       'Made to order in Raleigh, NC',
