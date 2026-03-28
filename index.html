@@ -114,7 +114,7 @@
       <div class="products-grid">
 
         <!-- Rocking Horse -->
-        <article class="product-card">
+        <article class="product-card has-stripe-badge" data-id="rocking-horse">
           <div class="product-img-wrap">
             <img src="https://i.etsystatic.com/64682766/r/il/7ee302/7875971577/il_fullxfull.7875971577_905o.jpg" alt="Solid Maple Wood Rocking Horse | Heirloom Baby Toy, Montessori Decor, Made in NC" loading="lazy" />
             <span class="free-shipping-badge">Free Shipping</span>
@@ -125,13 +125,13 @@
             <p>Heirloom baby toy and Montessori-inspired decor, handmade in NC. The kind of toy that gets passed down, not thrown away.</p>
             <div class="product-footer">
               <span class="product-price">$24.00</span>
-              <a href="https://www.etsy.com/listing/4475306872/handcrafted-solid-maple-wood-rocking" target="_blank" class="product-link">Buy on Etsy →</a>
+              <button class="product-link">View Details →</button>
             </div>
           </div>
         </article>
 
         <!-- Kids Tool Set -->
-        <article class="product-card">
+        <article class="product-card" data-id="tool-set">
           <div class="product-img-wrap">
             <img src="https://i.etsystatic.com/64682766/r/il/3a7581/7840054210/il_fullxfull.7840054210_au9e.jpg" alt="Solid Walnut Kids Tool Set | Montessori Pretend Play Hardwood Toys" loading="lazy" />
             <span class="free-shipping-badge">Free Shipping</span>
@@ -142,13 +142,13 @@
             <p>Montessori pretend play hardwood tools, intricately crafted from solid walnut. Because even the smallest hands deserve real wood tools.</p>
             <div class="product-footer">
               <span class="product-price">$42.00</span>
-              <a href="https://www.etsy.com/listing/4477274179/solid-walnut-kids-tool-set-montessori" target="_blank" class="product-link">Buy on Etsy →</a>
+              <button class="product-link">View Details →</button>
             </div>
           </div>
         </article>
 
         <!-- Building Blocks -->
-        <article class="product-card">
+        <article class="product-card" data-id="building-blocks">
           <div class="product-img-wrap">
             <img src="https://i.etsystatic.com/64682766/r/il/39c912/7876038325/il_fullxfull.7876038325_pc74.jpg" alt="Solid Walnut Maple Building Blocks | Montessori Sensory Play Heirloom Toy" loading="lazy" />
             <span class="free-shipping-badge">Free Shipping</span>
@@ -159,13 +159,13 @@
             <p>Montessori sensory play heirloom toy. Two contrasting hardwoods — no dyes, no finishes kids shouldn't touch. Just beautiful, weighty blocks.</p>
             <div class="product-footer">
               <span class="product-price">$30.00</span>
-              <a href="https://www.etsy.com/listing/4461327913/solid-walnut-maple-hardwood-building" target="_blank" class="product-link">Buy on Etsy →</a>
+              <button class="product-link">View Details →</button>
             </div>
           </div>
         </article>
 
         <!-- Letter Blocks -->
-        <article class="product-card">
+        <article class="product-card" data-id="letter-blocks">
           <div class="product-img-wrap">
             <img src="https://i.etsystatic.com/64682766/r/il/23fa13/7828100358/il_fullxfull.7828100358_a73h.jpg" alt="Personalized Solid Maple Wood Letter Blocks | Custom Name Gift, Desk Decor" loading="lazy" />
             <span class="product-badge">Personalized</span>
@@ -177,13 +177,13 @@
             <p>Custom name gift for nursery or desk. Each block cut from solid hard maple with your choice of letters — a personalized keepsake that grows with them.</p>
             <div class="product-footer">
               <span class="product-price">$28.00</span>
-              <a href="https://www.etsy.com/listing/4473058353/personalized-solid-maple-wood-mom-or-dad" target="_blank" class="product-link">Buy on Etsy →</a>
+              <button class="product-link">View Details →</button>
             </div>
           </div>
         </article>
 
         <!-- Name Sign -->
-        <article class="product-card">
+        <article class="product-card" data-id="name-sign">
           <div class="product-img-wrap">
             <img src="https://i.etsystatic.com/64682766/r/il/97a3d0/7828098346/il_fullxfull.7828098346_99ez.jpg" alt="Custom Solid Maple Wood Standing Name Sign | 3D Block Letters Nursery Decor" loading="lazy" />
             <span class="product-badge">Personalized</span>
@@ -195,13 +195,13 @@
             <p>3D block letters custom-cut for your little one's nursery. Made to order with your name — the perfect heirloom gift that gets better with age.</p>
             <div class="product-footer">
               <span class="product-price">$14.00</span>
-              <a href="https://www.etsy.com/listing/4470546400/custom-solid-maple-wood-standing-name" target="_blank" class="product-link">Buy on Etsy →</a>
+              <button class="product-link">View Details →</button>
             </div>
           </div>
         </article>
 
         <!-- Cherry Book Rest -->
-        <article class="product-card">
+        <article class="product-card" data-id="book-rest">
           <div class="product-img-wrap">
             <img src="https://i.etsystatic.com/64682766/r/il/f7f8a8/7739922546/il_fullxfull.7739922546_lskl.jpg" alt="Solid Cherry Book Rest | Minimalist Reading Stand, Desk Organizer, Page Holder (Made in NC)" loading="lazy" />
             <span class="free-shipping-badge">Free Shipping</span>
@@ -212,7 +212,7 @@
             <p>Minimalist reading stand, desk organizer, and page holder. Crafted from solid cherry in Raleigh, NC — built for people who love real things.</p>
             <div class="product-footer">
               <span class="product-price">$52.00</span>
-              <a href="https://www.etsy.com/listing/4461562555/solid-cherry-wood-book-rest-minimalist" target="_blank" class="product-link">Buy on Etsy →</a>
+              <button class="product-link">View Details →</button>
             </div>
           </div>
         </article>
@@ -374,6 +374,27 @@
       </div>
     </div>
   </footer>
+
+  <!-- ===== PRODUCT MODAL ===== -->
+  <div class="modal-overlay" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-inner">
+      <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+      <div class="modal-gallery">
+        <div class="modal-gallery-main">
+          <img id="modalMainImg" src="" alt="" />
+        </div>
+        <div class="modal-gallery-thumbs" id="modalThumbs"></div>
+      </div>
+      <div class="modal-details">
+        <div class="modal-material" id="modalMaterial"></div>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <div class="modal-price" id="modalPrice"></div>
+        <p class="modal-description" id="modalDescription"></p>
+        <ul class="modal-specs" id="modalSpecs"></ul>
+        <div class="modal-actions" id="modalActions"></div>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
