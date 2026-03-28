@@ -156,6 +156,7 @@ const PRODUCTS = {
       'Made to order in Raleigh, NC',
       'Free shipping · Returns accepted within 30 days',
     ],
+    stripeLink: 'https://buy.stripe.com/6oU5kDb5iglB2LC2eYaIM04',
     etsyLink: 'https://www.etsy.com/listing/4466633716/solid-walnut-wood-bunny-napkin-holder',
   },
   'bunny-tray': {
