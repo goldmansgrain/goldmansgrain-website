@@ -39,6 +39,7 @@ const PRODUCTS = {
       'Made to order in Raleigh, NC',
       'Free shipping · Returns accepted within 30 days',
     ],
+    stripeLink: 'https://buy.stripe.com/aFabJ1ehu0mDcmc8DmaIM03',
     etsyLink: 'https://www.etsy.com/listing/4477274179/solid-walnut-kids-tool-set-montessori',
   },
   'building-blocks': {
