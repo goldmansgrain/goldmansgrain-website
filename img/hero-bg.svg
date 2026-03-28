@@ -1,0 +1,254 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <!-- Wood bench surface base gradient (top-down: lighter in center, darker edges) -->
+    <linearGradient id="bench" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#7a5535"/>
+      <stop offset="35%"  stop-color="#9a7050"/>
+      <stop offset="65%"  stop-color="#8B6343"/>
+      <stop offset="100%" stop-color="#5a3a28"/>
+    </linearGradient>
+    <!-- Vignette: darken edges so hero text pops -->
+    <radialGradient id="vign" cx="40%" cy="50%" r="75%" gradientUnits="objectBoundingBox">
+      <stop offset="50%"  stop-color="#1a0e08" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1a0e08" stop-opacity="0.65"/>
+    </radialGradient>
+    <!-- Subtle warm spotlight from upper-left -->
+    <radialGradient id="spot" cx="30%" cy="20%" r="55%" gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#C8914A" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#C8914A" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Wood plank gradient -->
+    <linearGradient id="plank1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#b08050"/>
+      <stop offset="50%"  stop-color="#9a7040"/>
+      <stop offset="100%" stop-color="#7a5530"/>
+    </linearGradient>
+    <linearGradient id="plank2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#8a6040"/>
+      <stop offset="100%" stop-color="#6a4820"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ── BENCH SURFACE ──────────────────────────────────────── -->
+  <rect width="1600" height="900" fill="url(#bench)"/>
+
+  <!-- Wood grain lines (top-down view: horizontal across bench) -->
+  <line x1="0"    y1="38"  x2="1600" y2="35"  stroke="#4a3020" stroke-width="1.5" opacity="0.28"/>
+  <line x1="0"    y1="85"  x2="1600" y2="82"  stroke="#6a4828" stroke-width="1"   opacity="0.22"/>
+  <line x1="0"    y1="140" x2="1600" y2="144" stroke="#3D2B1F" stroke-width="2"   opacity="0.32"/>
+  <line x1="0"    y1="195" x2="1600" y2="192" stroke="#7a5535" stroke-width="1"   opacity="0.2"/>
+  <line x1="0"    y1="248" x2="1600" y2="251" stroke="#4a3020" stroke-width="2.5" opacity="0.3"/>
+  <line x1="0"    y1="305" x2="1600" y2="302" stroke="#6a4828" stroke-width="1"   opacity="0.2"/>
+  <line x1="0"    y1="362" x2="1600" y2="366" stroke="#3D2B1F" stroke-width="2"   opacity="0.28"/>
+  <line x1="0"    y1="420" x2="1600" y2="418" stroke="#5a3a28" stroke-width="1.5" opacity="0.22"/>
+  <line x1="0"    y1="478" x2="1600" y2="475" stroke="#4a3020" stroke-width="2"   opacity="0.3"/>
+  <line x1="0"    y1="535" x2="1600" y2="538" stroke="#7a5535" stroke-width="1"   opacity="0.18"/>
+  <line x1="0"    y1="590" x2="1600" y2="588" stroke="#3D2B1F" stroke-width="2.5" opacity="0.28"/>
+  <line x1="0"    y1="648" x2="1600" y2="652" stroke="#6a4828" stroke-width="1"   opacity="0.2"/>
+  <line x1="0"    y1="705" x2="1600" y2="702" stroke="#4a3020" stroke-width="2"   opacity="0.25"/>
+  <line x1="0"    y1="760" x2="1600" y2="763" stroke="#5a3a28" stroke-width="1"   opacity="0.2"/>
+  <line x1="0"    y1="820" x2="1600" y2="817" stroke="#3D2B1F" stroke-width="1.5" opacity="0.28"/>
+  <line x1="0"    y1="870" x2="1600" y2="873" stroke="#6a4828" stroke-width="1"   opacity="0.2"/>
+
+  <!-- Knot marks in the wood grain -->
+  <ellipse cx="380"  cy="260" rx="28" ry="14" fill="none" stroke="#3D2B1F" stroke-width="2" opacity="0.35"/>
+  <ellipse cx="380"  cy="260" rx="14" ry="7"  fill="none" stroke="#2c1810" stroke-width="1.5" opacity="0.4"/>
+  <ellipse cx="1180" cy="580" rx="22" ry="11" fill="none" stroke="#3D2B1F" stroke-width="2" opacity="0.3"/>
+  <ellipse cx="1180" cy="580" rx="10" ry="5"  fill="none" stroke="#2c1810" stroke-width="1.5" opacity="0.38"/>
+  <ellipse cx="820"  cy="750" rx="18" ry="9"  fill="none" stroke="#4a3020" stroke-width="1.5" opacity="0.28"/>
+
+  <!-- ── WOOD PLANK / WORKPIECE (being cut) ──────────────────── -->
+  <!-- Main plank lying on bench, upper-center-right -->
+  <rect x="680" y="60" width="580" height="130" rx="4" fill="url(#plank1)" opacity="0.85"/>
+  <!-- Plank grain -->
+  <line x1="690" y1="90"  x2="1250" y2="88"  stroke="#7a5530" stroke-width="1"   opacity="0.4"/>
+  <line x1="690" y1="115" x2="1250" y2="118" stroke="#6a4828" stroke-width="1.5" opacity="0.35"/>
+  <line x1="690" y1="145" x2="1250" y2="143" stroke="#7a5530" stroke-width="1"   opacity="0.38"/>
+  <!-- Cut end of plank (fresh cross-section) -->
+  <rect x="1250" y="60" width="10" height="130" rx="2" fill="#d4a870" opacity="0.9"/>
+  <!-- Plank shadow -->
+  <rect x="680" y="185" width="582" height="8" rx="2" fill="#1a0e08" opacity="0.3"/>
+
+  <!-- Smaller offcut piece -->
+  <rect x="680" y="200" width="140" height="65" rx="3" fill="url(#plank2)" opacity="0.8"/>
+  <line x1="688" y1="220" x2="812" y2="218" stroke="#8a6040" stroke-width="1" opacity="0.4"/>
+  <line x1="688" y1="240" x2="812" y2="243" stroke="#6a4828" stroke-width="1" opacity="0.35"/>
+  <rect x="688" y="200" width="8" height="65" rx="2" fill="#c89860" opacity="0.7"/>
+  <rect x="688" y="262" width="134" height="5" rx="1" fill="#1a0e08" opacity="0.25"/>
+
+  <!-- ── TOOLS (top-down view) ──────────────────────────────── -->
+
+  <!-- Chisel #1 -->
+  <g transform="rotate(-12, 200, 400)">
+    <rect x="165" y="350" width="12" height="120" rx="3" fill="#2c1810" opacity="0.9"/>
+    <rect x="160" y="440" width="22" height="30"  rx="2" fill="#8B6343" opacity="0.85"/>
+    <rect x="162" y="340" width="18" height="12"  rx="1" fill="#C8914A" opacity="0.9"/>
+    <rect x="164" y="352" width="14" height="88"  rx="1" fill="#3D2B1F" opacity="0.5"/>
+    <!-- tool shadow -->
+    <rect x="168" y="352" width="14" height="120" rx="2" fill="#1a0e08" opacity="0.3" transform="translate(3,3)"/>
+  </g>
+
+  <!-- Chisel #2 -->
+  <g transform="rotate(-8, 240, 380)">
+    <rect x="225" y="320" width="10" height="110" rx="3" fill="#2c1810" opacity="0.9"/>
+    <rect x="220" y="405" width="20" height="25"  rx="2" fill="#8B6343" opacity="0.85"/>
+    <rect x="222" y="310" width="16" height="12"  rx="1" fill="#C8914A" opacity="0.9"/>
+  </g>
+
+  <!-- Mallet / hammer (top-down: head left, handle right) -->
+  <g transform="rotate(15, 400, 520)">
+    <!-- Handle -->
+    <rect x="310" y="510" width="200" height="18" rx="5" fill="#6a4828" opacity="0.9"/>
+    <rect x="310" y="510" width="200" height="18" rx="5" fill="none" stroke="#4a3020" stroke-width="1" opacity="0.5"/>
+    <!-- Head -->
+    <rect x="290" y="492" width="55" height="54" rx="6" fill="#3D2B1F" opacity="0.95"/>
+    <rect x="295" y="497" width="45" height="44" rx="4" fill="#4a3020" opacity="0.5"/>
+    <!-- shadow -->
+    <rect x="293" y="495" width="57" height="56" rx="6" fill="#1a0e08" opacity="0.3" transform="translate(4,4)"/>
+  </g>
+
+  <!-- Tape measure (top-down: circular yellow body) -->
+  <g transform="translate(1380, 280)">
+    <circle cx="0" cy="0" r="52" fill="#C8914A" opacity="0.9"/>
+    <circle cx="0" cy="0" r="44" fill="#d4a040" opacity="0.8"/>
+    <circle cx="0" cy="0" r="20" fill="#b87830" opacity="0.9"/>
+    <circle cx="0" cy="0" r="14" fill="#8B6343" opacity="0.8"/>
+    <!-- Lock button -->
+    <rect x="-8" y="-48" width="16" height="10" rx="3" fill="#2c1810" opacity="0.9"/>
+    <!-- Belt clip -->
+    <rect x="40" y="-8" width="24" height="16" rx="3" fill="#3D2B1F" opacity="0.85"/>
+    <!-- Label text suggestion: small lines -->
+    <line x1="-18" y1="-6" x2="18" y2="-6" stroke="#8B6343" stroke-width="1.5" opacity="0.6"/>
+    <line x1="-12" y1="2"  x2="12" y2="2"  stroke="#8B6343" stroke-width="1"   opacity="0.5"/>
+    <!-- shadow -->
+    <circle cx="4" cy="4" r="52" fill="#1a0e08" opacity="0.2"/>
+  </g>
+
+  <!-- Wood square / speed square (L-shape, top-down) -->
+  <g transform="rotate(-5, 1200, 160)">
+    <polygon points="1140,110 1260,110 1260,125 1155,125 1155,230 1140,230" fill="#C8914A" opacity="0.85"/>
+    <polygon points="1143,113 1257,113 1257,122 1152,122 1152,227 1143,227" fill="#d4a040" opacity="0.4"/>
+    <!-- shadow -->
+    <polygon points="1143,114 1263,114 1263,128 1158,128 1158,233 1143,233" fill="#1a0e08" opacity="0.25" transform="translate(3,3)"/>
+  </g>
+
+  <!-- Pencil (top-down) -->
+  <g transform="rotate(22, 550, 680)">
+    <rect x="480" y="673" width="150" height="10" rx="3" fill="#F5E6C8" opacity="0.9"/>
+    <rect x="480" y="673" width="150" height="10" rx="3" fill="none" stroke="#C8914A" stroke-width="1" opacity="0.6"/>
+    <!-- eraser end -->
+    <rect x="620" y="672" width="15" height="12" rx="2" fill="#e08080" opacity="0.75"/>
+    <!-- tip -->
+    <polygon points="480,673 480,683 468,678" fill="#2c1810" opacity="0.9"/>
+    <!-- wood part near tip -->
+    <polygon points="480,673 480,683 494,683 494,673" fill="#C8914A" opacity="0.7"/>
+  </g>
+
+  <!-- ── SAWDUST ─────────────────────────────────────────────── -->
+  <!-- Viewed from above: small dots/short lines/fragments -->
+  <!-- Dense scatter near the plank (fresh cut) -->
+
+  <!-- Fine dust near the cut end of plank, x~1240-1350, y~60-200 -->
+  <ellipse cx="1268" cy="72"  rx="5"  ry="2"   fill="#F5E6C8" opacity="0.7"  transform="rotate(-12,1268,72)"/>
+  <ellipse cx="1295" cy="85"  rx="3"  ry="1.5" fill="#e8c898" opacity="0.65" transform="rotate(20,1295,85)"/>
+  <ellipse cx="1312" cy="68"  rx="6"  ry="2"   fill="#F5E6C8" opacity="0.6"  transform="rotate(5,1312,68)"/>
+  <ellipse cx="1328" cy="95"  rx="4"  ry="1.5" fill="#d4b070" opacity="0.7"  transform="rotate(-30,1328,95)"/>
+  <ellipse cx="1285" cy="110" rx="5"  ry="2"   fill="#F5E6C8" opacity="0.65" transform="rotate(15,1285,110)"/>
+  <ellipse cx="1340" cy="75"  rx="3"  ry="1"   fill="#e8c898" opacity="0.6"  transform="rotate(-8,1340,75)"/>
+  <ellipse cx="1360" cy="105" rx="6"  ry="2"   fill="#F5E6C8" opacity="0.55" transform="rotate(25,1360,105)"/>
+  <ellipse cx="1275" cy="135" rx="4"  ry="1.5" fill="#d4b070" opacity="0.6"  transform="rotate(-18,1275,135)"/>
+  <ellipse cx="1320" cy="150" rx="5"  ry="1.5" fill="#F5E6C8" opacity="0.65" transform="rotate(10,1320,150)"/>
+  <ellipse cx="1355" cy="130" rx="3"  ry="1"   fill="#e8c898" opacity="0.6"  transform="rotate(-5,1355,130)"/>
+  <ellipse cx="1380" cy="155" rx="7"  ry="2.5" fill="#F5E6C8" opacity="0.5"  transform="rotate(18,1380,155)"/>
+  <ellipse cx="1265" cy="170" rx="4"  ry="1.5" fill="#d4b070" opacity="0.6"  transform="rotate(-22,1265,170)"/>
+  <ellipse cx="1300" cy="185" rx="5"  ry="2"   fill="#F5E6C8" opacity="0.55" transform="rotate(8,1300,185)"/>
+  <ellipse cx="1340" cy="175" rx="3"  ry="1"   fill="#e8c898" opacity="0.65" transform="rotate(-15,1340,175)"/>
+  <ellipse cx="1370" cy="190" rx="6"  ry="2"   fill="#F5E6C8" opacity="0.5"  transform="rotate(30,1370,190)"/>
+
+  <!-- Wood curls/shavings (from above: narrow curved strips) -->
+  <path d="M1270,215 Q1285,208 1295,216 Q1303,224 1294,230 Q1282,235 1272,226 Z" fill="#C8914A" opacity="0.55"/>
+  <path d="M1335,205 Q1350,198 1360,207 Q1368,216 1358,221 Q1346,226 1337,217 Z" fill="#F5E6C8" opacity="0.5"/>
+  <path d="M1390,220 Q1405,213 1414,221 Q1421,229 1412,235 Q1401,240 1392,231 Z" fill="#e8c898" opacity="0.55"/>
+
+  <!-- General sawdust scattered across the whole bench -->
+  <!-- Top area, left side -->
+  <ellipse cx="42"   cy="55"  rx="5"  ry="1.5" fill="#F5E6C8" opacity="0.45" transform="rotate(-15,42,55)"/>
+  <ellipse cx="115"  cy="42"  rx="7"  ry="2"   fill="#e8c898" opacity="0.4"  transform="rotate(8,115,42)"/>
+  <ellipse cx="240"  cy="70"  rx="4"  ry="1.5" fill="#d4b070" opacity="0.45" transform="rotate(-28,240,70)"/>
+  <ellipse cx="360"  cy="48"  rx="6"  ry="2"   fill="#F5E6C8" opacity="0.4"  transform="rotate(18,360,48)"/>
+  <ellipse cx="480"  cy="62"  rx="5"  ry="1.5" fill="#e8c898" opacity="0.45" transform="rotate(-5,480,62)"/>
+  <ellipse cx="590"  cy="44"  rx="8"  ry="2.5" fill="#F5E6C8" opacity="0.4"  transform="rotate(22,590,44)"/>
+  <ellipse cx="78"   cy="100" rx="4"  ry="1"   fill="#d4b070" opacity="0.5"  transform="rotate(10,78,100)"/>
+  <ellipse cx="195"  cy="115" rx="6"  ry="2"   fill="#F5E6C8" opacity="0.45" transform="rotate(-20,195,115)"/>
+  <ellipse cx="430"  cy="105" rx="5"  ry="1.5" fill="#e8c898" opacity="0.45" transform="rotate(12,430,105)"/>
+  <ellipse cx="560"  cy="120" rx="4"  ry="1"   fill="#d4b070" opacity="0.5"  transform="rotate(-30,560,120)"/>
+
+  <!-- Mid bench, scattered broadly -->
+  <ellipse cx="55"   cy="300" rx="6"  ry="2"   fill="#F5E6C8" opacity="0.45" transform="rotate(-18,55,300)"/>
+  <ellipse cx="145"  cy="285" rx="4"  ry="1.5" fill="#e8c898" opacity="0.4"  transform="rotate(12,145,285)"/>
+  <ellipse cx="310"  cy="320" rx="7"  ry="2.5" fill="#F5E6C8" opacity="0.5"  transform="rotate(-8,310,320)"/>
+  <ellipse cx="490"  cy="295" rx="5"  ry="1.5" fill="#d4b070" opacity="0.45" transform="rotate(25,490,295)"/>
+  <ellipse cx="640"  cy="310" rx="4"  ry="1"   fill="#F5E6C8" opacity="0.45" transform="rotate(-15,640,310)"/>
+  <ellipse cx="800"  cy="290" rx="8"  ry="2.5" fill="#e8c898" opacity="0.4"  transform="rotate(10,800,290)"/>
+  <ellipse cx="920"  cy="315" rx="5"  ry="1.5" fill="#F5E6C8" opacity="0.5"  transform="rotate(-22,920,315)"/>
+  <ellipse cx="1060" cy="300" rx="6"  ry="2"   fill="#d4b070" opacity="0.45" transform="rotate(5,1060,300)"/>
+  <ellipse cx="1100" cy="330" rx="4"  ry="1"   fill="#F5E6C8" opacity="0.45" transform="rotate(-30,1100,330)"/>
+  <ellipse cx="1450" cy="310" rx="7"  ry="2"   fill="#e8c898" opacity="0.4"  transform="rotate(18,1450,310)"/>
+  <ellipse cx="1550" cy="295" rx="5"  ry="1.5" fill="#F5E6C8" opacity="0.45" transform="rotate(-12,1550,295)"/>
+
+  <!-- Dense pile near mallet area -->
+  <ellipse cx="390"  cy="500" rx="70" ry="15"  fill="#C8914A"  opacity="0.22"/>
+  <ellipse cx="385"  cy="498" rx="45" ry="10"  fill="#F5E6C8"  opacity="0.18"/>
+  <ellipse cx="370"  cy="510" rx="6"  ry="2"   fill="#F5E6C8"  opacity="0.55" transform="rotate(-18,370,510)"/>
+  <ellipse cx="398"  cy="505" rx="5"  ry="1.5" fill="#e8c898"  opacity="0.55" transform="rotate(12,398,505)"/>
+  <ellipse cx="420"  cy="512" rx="7"  ry="2"   fill="#d4b070"  opacity="0.5"  transform="rotate(-8,420,512)"/>
+  <ellipse cx="345"  cy="515" rx="4"  ry="1"   fill="#F5E6C8"  opacity="0.6"  transform="rotate(25,345,515)"/>
+  <ellipse cx="408"  cy="525" rx="6"  ry="2"   fill="#e8c898"  opacity="0.5"  transform="rotate(-15,408,525)"/>
+  <ellipse cx="362"  cy="508" rx="5"  ry="1.5" fill="#C8914A"  opacity="0.55" transform="rotate(8,362,508)"/>
+  <ellipse cx="432"  cy="498" rx="4"  ry="1"   fill="#F5E6C8"  opacity="0.6"  transform="rotate(-28,432,498)"/>
+
+  <!-- Wood curls near the plank offcut -->
+  <path d="M740,285 Q758,276 770,285 Q780,295 770,302 Q757,308 745,298 Z" fill="#C8914A" opacity="0.5"/>
+  <path d="M760,305 Q775,297 785,306 Q793,315 783,321 Q770,326 760,316 Z" fill="#F5E6C8" opacity="0.45"/>
+  <path d="M705,270 Q718,263 727,270 Q734,278 726,284 Q715,289 706,282 Z" fill="#e8c898" opacity="0.5"/>
+
+  <!-- Lower bench area sawdust -->
+  <ellipse cx="60"   cy="620" rx="5"  ry="1.5" fill="#F5E6C8"  opacity="0.45" transform="rotate(-20,60,620)"/>
+  <ellipse cx="160"  cy="640" rx="7"  ry="2"   fill="#e8c898"  opacity="0.4"  transform="rotate(10,160,640)"/>
+  <ellipse cx="290"  cy="625" rx="4"  ry="1"   fill="#d4b070"  opacity="0.5"  transform="rotate(-5,290,625)"/>
+  <ellipse cx="500"  cy="650" rx="8"  ry="2.5" fill="#F5E6C8"  opacity="0.45" transform="rotate(20,500,650)"/>
+  <ellipse cx="660"  cy="630" rx="5"  ry="1.5" fill="#e8c898"  opacity="0.4"  transform="rotate(-15,660,630)"/>
+  <ellipse cx="850"  cy="655" rx="6"  ry="2"   fill="#F5E6C8"  opacity="0.5"  transform="rotate(8,850,655)"/>
+  <ellipse cx="1000" cy="635" rx="4"  ry="1"   fill="#d4b070"  opacity="0.5"  transform="rotate(-25,1000,635)"/>
+  <ellipse cx="1150" cy="650" rx="7"  ry="2"   fill="#F5E6C8"  opacity="0.45" transform="rotate(15,1150,650)"/>
+  <ellipse cx="1300" cy="640" rx="5"  ry="1.5" fill="#e8c898"  opacity="0.4"  transform="rotate(-10,1300,640)"/>
+  <ellipse cx="1480" cy="625" rx="6"  ry="2"   fill="#F5E6C8"  opacity="0.5"  transform="rotate(22,1480,625)"/>
+  <ellipse cx="1580" cy="660" rx="4"  ry="1"   fill="#d4b070"  opacity="0.45" transform="rotate(-18,1580,660)"/>
+
+  <!-- Bottom edge scatter (sawdust collects along edges) -->
+  <ellipse cx="80"   cy="840" rx="9"  ry="3"   fill="#C8914A"  opacity="0.35" transform="rotate(-10,80,840)"/>
+  <ellipse cx="220"  cy="858" rx="6"  ry="2"   fill="#F5E6C8"  opacity="0.45" transform="rotate(15,220,858)"/>
+  <ellipse cx="410"  cy="845" rx="10" ry="3.5" fill="#e8c898"  opacity="0.38" transform="rotate(-5,410,845)"/>
+  <ellipse cx="590"  cy="862" rx="7"  ry="2.5" fill="#d4b070"  opacity="0.45" transform="rotate(20,590,862)"/>
+  <ellipse cx="780"  cy="850" rx="9"  ry="3"   fill="#F5E6C8"  opacity="0.4"  transform="rotate(-15,780,850)"/>
+  <ellipse cx="960"  cy="865" rx="6"  ry="2"   fill="#C8914A"  opacity="0.38" transform="rotate(8,960,865)"/>
+  <ellipse cx="1140" cy="848" rx="10" ry="3.5" fill="#e8c898"  opacity="0.42" transform="rotate(-22,1140,848)"/>
+  <ellipse cx="1320" cy="860" rx="7"  ry="2.5" fill="#F5E6C8"  opacity="0.45" transform="rotate(12,1320,860)"/>
+  <ellipse cx="1510" cy="845" rx="8"  ry="3"   fill="#d4b070"  opacity="0.38" transform="rotate(-8,1510,845)"/>
+
+  <!-- A few large wood shavings (curls) scattered across bench -->
+  <path d="M120,430 Q138,420 150,430 Q160,440 150,448 Q137,454 126,444 Q117,436 120,430 Z" fill="#C8914A" opacity="0.5"/>
+  <path d="M108,436 Q125,427 136,436 Q144,445 136,452 Q123,457 113,447 Z" fill="none" stroke="#b87830" stroke-width="1.5" opacity="0.45"/>
+
+  <path d="M920,580 Q940,570 953,580 Q963,590 952,598 Q939,604 927,594 Z" fill="#F5E6C8" opacity="0.48"/>
+  <path d="M907,588 Q926,579 938,588 Q947,597 938,604 Q925,609 914,600 Z" fill="none" stroke="#e8c898" stroke-width="1.5" opacity="0.4"/>
+
+  <path d="M1490,480 Q1508,471 1520,480 Q1530,490 1520,498 Q1507,504 1496,494 Z" fill="#e8c898" opacity="0.5"/>
+  <path d="M55,700 Q72,691  83,700 Q91,709  82,716 Q70,721  60,712 Z" fill="#C8914A" opacity="0.48"/>
+
+  <!-- ── OVERLAYS ─────────────────────────────────────────────── -->
+  <!-- Warm spotlight (simulates overhead lamp) -->
+  <rect width="1600" height="900" fill="url(#spot)"/>
+  <!-- Edge vignette (darkens edges so text is legible over the hero gradient overlay) -->
+  <rect width="1600" height="900" fill="url(#vign)"/>
+</svg>
