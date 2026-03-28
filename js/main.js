@@ -61,6 +61,7 @@ const PRODUCTS = {
       'Made to order in Raleigh, NC · Allow 3–5 business days',
       'Free shipping · Returns accepted within 30 days',
     ],
+    stripeLink: 'https://buy.stripe.com/aFadR9ehuc5lae44n6aIM05',
     etsyLink: 'https://www.etsy.com/listing/4479421053/solid-hardwood-animal-figure-set',
   },
   'building-blocks': {
