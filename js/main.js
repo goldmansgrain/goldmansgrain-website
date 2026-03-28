@@ -145,6 +145,7 @@ const PRODUCTS = {
       'Made to order in Raleigh, NC',
       'Free shipping · Returns accepted within 30 days',
     ],
+    stripeLink: 'https://buy.stripe.com/cNibJ1fly0mDbi87ziaIM06',
     etsyLink: 'https://www.etsy.com/listing/4461562555/solid-cherry-wood-book-rest-minimalist',
   },
   'name-sign': {
