@@ -72,6 +72,7 @@ const PRODUCTS = {
       'Made to order in Raleigh, NC',
       'Free shipping · Returns accepted within 30 days',
     ],
+    stripeLink: 'https://buy.stripe.com/4gM4gz1uI3yPfyo1aUaIM02',
     etsyLink: 'https://www.etsy.com/listing/4473058353/personalized-solid-maple-wood-mom-or-dad',
   },
   'honeycomb-trivet': {
