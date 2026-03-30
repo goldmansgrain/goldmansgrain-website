@@ -48,7 +48,7 @@ const PRODUCTS = {
     price: '$39.00',
     priceNote: 'Set of 5 — Chick, Fox, Frog, Koala, Hippo',
     images: [
-      'https://i.etsystatic.com/64682766/r/il/54f3db/7902191609/il_fullxfull.7902191609_nt5v.jpg',
+      'https://i.etsystatic.com/64682766/r/il/2b547f/7859011140/il_fullxfull.7859011140_441g.jpg',
       'https://i.etsystatic.com/64682766/r/il/09b445/7902191379/il_fullxfull.7902191379_cu2d.jpg',
       'https://i.etsystatic.com/64682766/r/il/e9ccdc/7902191479/il_fullxfull.7902191479_opcr.jpg',
     ],
