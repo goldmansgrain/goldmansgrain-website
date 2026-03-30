@@ -81,7 +81,7 @@ const PRODUCTS = {
     etsyLink: 'https://www.etsy.com/listing/4461327913/solid-walnut-maple-hardwood-building',
   },
   'letter-blocks': {
-    title: 'Personalized Solid Maple Wood Letter Blocks',
+    title: 'Personalized Maple Name Blocks | Custom Mothers & Fathers Day Gift, Nursery Decor, Desktop Name Plate',
     material: 'Solid Maple',
     price: '$28.00',
     images: [
