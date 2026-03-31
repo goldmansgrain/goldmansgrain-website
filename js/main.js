@@ -61,7 +61,7 @@ const PRODUCTS = {
       'Made to order in Raleigh, NC · Allow 3–5 business days',
       'Free shipping · Returns accepted within 30 days',
     ],
-    stripeLink: 'https://buy.stripe.com/aFadR9ehuc5lae44n6aIM05',
+    stripeLink: 'https://buy.stripe.com/3cI3cvgpCglB71S8DmaIM08',
     etsyLink: 'https://www.etsy.com/listing/4479421053/solid-hardwood-animal-figure-set',
   },
   'building-blocks': {
@@ -145,7 +145,7 @@ const PRODUCTS = {
       'Made to order in Raleigh, NC',
       'Free shipping · Returns accepted within 30 days',
     ],
-    stripeLink: 'https://buy.stripe.com/cNibJ1fly0mDbi87ziaIM06',
+    stripeLink: 'https://buy.stripe.com/6oU3cv8Xa7P5gCs7ziaIM07',
     etsyLink: 'https://www.etsy.com/listing/4461562555/solid-cherry-wood-book-rest-minimalist',
   },
   'name-sign': {
@@ -181,7 +181,7 @@ const PRODUCTS = {
       'Made to order in Raleigh, NC',
       'Free shipping · Returns accepted within 30 days',
     ],
-    stripeLink: 'https://buy.stripe.com/6oU5kDb5iglB2LC2eYaIM04',
+    stripeLink: 'https://buy.stripe.com/eVq3cvddq1qHcmcdXGaIM09',
     etsyLink: 'https://www.etsy.com/listing/4466633716/solid-walnut-wood-bunny-napkin-holder',
   },
   'hugging-angel': {
