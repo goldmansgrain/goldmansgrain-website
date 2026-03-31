@@ -22,7 +22,7 @@ const PRODUCTS = {
       'Made to order in Raleigh, NC',
       'Free shipping · Returns accepted within 30 days',
     ],
-    stripeLink: 'https://buy.stripe.com/5kQdR96P2b1h4TKf1KaIM00',
+    stripeLink: 'https://buy.stripe.com/14A8wPc9m4CTdqg3j2aIM0b',
     etsyLink: 'https://www.etsy.com/listing/4475306872/handcrafted-solid-maple-wood-rocking',
   },
   'tool-set': {
@@ -39,7 +39,7 @@ const PRODUCTS = {
       'Made to order in Raleigh, NC',
       'Free shipping · Returns accepted within 30 days',
     ],
-    stripeLink: 'https://buy.stripe.com/aFabJ1ehu0mDcmc8DmaIM03',
+    stripeLink: 'https://buy.stripe.com/cNi4gz0qE1qH0DudXGaIM0a',
     etsyLink: 'https://www.etsy.com/listing/4477274179/solid-walnut-kids-tool-set-montessori',
   },
   'animal-figures': {
