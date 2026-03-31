@@ -95,7 +95,7 @@ const PRODUCTS = {
       'Made to order in Raleigh, NC',
       'Free shipping · Returns accepted within 30 days',
     ],
-    stripeLink: 'https://buy.stripe.com/4gM4gz1uI3yPfyo1aUaIM02',
+    stripeLink: 'https://buy.stripe.com/4gMdR9ddq7P5ae46veaIM0c',
     etsyLink: 'https://www.etsy.com/listing/4473058353/personalized-solid-maple-wood-mom-or-dad',
   },
   'honeycomb-trivet': {
@@ -168,7 +168,7 @@ const PRODUCTS = {
   'bunny-napkin': {
     title: 'Solid Walnut Bunny Napkin Holder — Set of 4',
     material: 'Solid Walnut',
-    price: '$16.00',
+    price: '$29.00',
     priceNote: 'Set of 4 napkin holders',
     images: [
       'https://i.etsystatic.com/64682766/r/il/25a5ac/7876051219/il_fullxfull.7876051219_2iq4.jpg',
@@ -203,6 +203,7 @@ const PRODUCTS = {
       'Made to order in Raleigh, NC',
       'Free shipping · Returns accepted within 30 days',
     ],
+    stripeLink: 'https://buy.stripe.com/aFa7sLfly6L1dqg6veaIM0d',
     etsyLink: 'https://www.etsy.com/listing/4480427101/hugging-angel-wood-carving-solid-walnut',
   },
   'bunny-tray': {
