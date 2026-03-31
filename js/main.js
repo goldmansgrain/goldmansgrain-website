@@ -5,8 +5,8 @@ const PRODUCTS = {
   'rocking-horse': {
     title: 'Solid Maple Wood Rocking Horse',
     material: 'Solid Maple · Solid Walnut',
-    price: '$24.00',
-    priceNote: 'With name + date engraving: $34.00',
+    price: '$19.00',
+    priceNote: 'With name + date engraving: $29.00',
     images: [
       'https://i.etsystatic.com/64682766/r/il/cc0583/7875971579/il_fullxfull.7875971579_ix6r.jpg',
       'https://i.etsystatic.com/64682766/r/il/7ee302/7875971577/il_fullxfull.7875971577_905o.jpg',
@@ -28,7 +28,7 @@ const PRODUCTS = {
   'tool-set': {
     title: 'Solid Walnut Kids Tool Set',
     material: 'Solid Walnut',
-    price: '$42.00',
+    price: '$29.00',
     images: [
       'https://i.etsystatic.com/64682766/r/il/3a7581/7840054210/il_fullxfull.7840054210_au9e.jpg',
     ],
@@ -45,7 +45,7 @@ const PRODUCTS = {
   'animal-figures': {
     title: 'Solid Hardwood Animal Figure Set',
     material: 'Hard Maple · Black Walnut',
-    price: '$39.00',
+    price: '$29.00',
     priceNote: 'Set of 5 — Chick, Fox, Frog, Koala, Hippo',
     images: [
       'https://i.etsystatic.com/64682766/r/il/2b547f/7859011140/il_fullxfull.7859011140_441g.jpg',
@@ -67,7 +67,7 @@ const PRODUCTS = {
   'building-blocks': {
     title: 'Solid Walnut & Maple Building Blocks',
     material: 'Solid Walnut + Maple',
-    price: '$30.00',
+    price: '$29.00',
     images: [
       'https://i.etsystatic.com/64682766/r/il/39c912/7876038325/il_fullxfull.7876038325_pc74.jpg',
     ],
@@ -83,7 +83,7 @@ const PRODUCTS = {
   'letter-blocks': {
     title: 'Personalized Maple Name Blocks | Custom Mothers & Fathers Day Gift, Nursery Decor, Desktop Name Plate',
     material: 'Solid Maple',
-    price: '$28.00',
+    price: '$29.00',
     images: [
       'https://i.etsystatic.com/64682766/r/il/23fa13/7828100358/il_fullxfull.7828100358_a73h.jpg',
     ],
@@ -101,7 +101,7 @@ const PRODUCTS = {
   'honeycomb-trivet': {
     title: 'Personalized Hard Maple Honeycomb Trivet',
     material: 'Hard Maple',
-    price: '$42.00',
+    price: '$29.00',
     images: [
       'https://i.etsystatic.com/64682766/r/il/5d9fc0/7778048452/il_fullxfull.7778048452_32d5.jpg',
     ],
@@ -118,7 +118,7 @@ const PRODUCTS = {
   'kitchen-riser': {
     title: 'Handcrafted Solid Walnut Kitchen Riser',
     material: 'Solid Walnut',
-    price: '$42.00',
+    price: '$32.00',
     images: [
       'https://i.etsystatic.com/64682766/r/il/33dae8/7735979702/il_fullxfull.7735979702_ers3.jpg',
     ],
@@ -134,7 +134,7 @@ const PRODUCTS = {
   'book-rest': {
     title: 'Solid Cherry Book Rest',
     material: 'Solid Cherry',
-    price: '$52.00',
+    price: '$29.00',
     images: [
       'https://i.etsystatic.com/64682766/r/il/f7f8a8/7739922546/il_fullxfull.7739922546_lskl.jpg',
     ],
@@ -168,7 +168,7 @@ const PRODUCTS = {
   'bunny-napkin': {
     title: 'Solid Walnut Bunny Napkin Holder — Set of 4',
     material: 'Solid Walnut',
-    price: '$29.00',
+    price: '$16.00',
     priceNote: 'Set of 4 napkin holders',
     images: [
       'https://i.etsystatic.com/64682766/r/il/25a5ac/7876051219/il_fullxfull.7876051219_2iq4.jpg',
@@ -184,10 +184,31 @@ const PRODUCTS = {
     stripeLink: 'https://buy.stripe.com/6oU5kDb5iglB2LC2eYaIM04',
     etsyLink: 'https://www.etsy.com/listing/4466633716/solid-walnut-wood-bunny-napkin-holder',
   },
+  'hugging-angel': {
+    title: 'Hugging Angel Wood Carving – Solid Walnut or Maple, Minimalist Comfort Gift',
+    material: 'Solid Maple · Black Walnut',
+    price: '$29.00',
+    priceNote: 'With name/scripture engraving: $34.00',
+    images: [
+      'https://i.etsystatic.com/64682766/r/il/531b49/7860933714/il_fullxfull.7860933714_fc2k.jpg',
+      'https://i.etsystatic.com/64682766/r/il/97922e/7860933716/il_fullxfull.7860933716_t2op.jpg',
+      'https://i.etsystatic.com/64682766/r/il/806e60/7909047463/il_fullxfull.7909047463_k4ge.jpg',
+    ],
+    description: 'This hugging guardian angel is cut from solid North American hardwood — not plywood, not MDF, not "wood composite." Real, premium timber.\n\nChoose the creamy, durable tones of Solid Maple or the deep, chocolatey richness of Black Walnut. Finished with a premium wood oil that is non-toxic and silk-smooth to the touch.\n\nThe "hugging" silhouette creates a striking modern look — a substantial, tactile token of protection for a nursery, a memorial, or a quiet space in your home.\n\nWant to add a name, initials, or scripture to the base? Message us before ordering and we\'ll work it in.',
+    specs: [
+      '100% Solid Maple or Black Walnut Hardwood',
+      'Approx. 7″ Tall × 6″ Wide × ¾″ Thick',
+      'Premium wood oil finish — non-toxic, silk-smooth',
+      'Choice of Maple (light) or Black Walnut (dark)',
+      'Made to order in Raleigh, NC',
+      'Free shipping · Returns accepted within 30 days',
+    ],
+    etsyLink: 'https://www.etsy.com/listing/4480427101/hugging-angel-wood-carving-solid-walnut',
+  },
   'bunny-tray': {
     title: 'Solid Walnut Bunny Treat Tray',
     material: 'Solid Walnut',
-    price: '$42.00',
+    price: '$29.00',
     images: [
       'https://i.etsystatic.com/64682766/r/il/4269f8/7772683858/il_fullxfull.7772683858_jkdf.jpg',
     ],
