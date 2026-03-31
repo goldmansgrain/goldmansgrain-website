@@ -8,7 +8,7 @@ const PRODUCTS = {
     price: '$19.00',
     priceNote: 'With name + date engraving: $29.00',
     images: [
-      'https://i.etsystatic.com/64682766/r/il/cc0583/7875971579/il_fullxfull.7875971579_ix6r.jpg',
+      'https://i.etsystatic.com/64682766/r/il/32a416/7861007734/il_fullxfull.7861007734_cdm0.jpg',
       'https://i.etsystatic.com/64682766/r/il/7ee302/7875971577/il_fullxfull.7875971577_905o.jpg',
       'https://i.etsystatic.com/64682766/r/il/c731c3/7876136341/il_fullxfull.7876136341_a33j.jpg',
       'https://i.etsystatic.com/64682766/r/il/d999c0/7828099858/il_fullxfull.7828099858_ao7h.jpg',
