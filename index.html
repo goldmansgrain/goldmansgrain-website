@@ -116,7 +116,7 @@
       <div class="section-header">
         <span class="section-label">Choose Your Wood</span>
         <h2>Every Grain Tells a Different Story</h2>
-        <p>Three premium hardwoods, each with its own character, tone, and feel. See what your piece looks like in each.</p>
+        <p>Three premium hardwoods, each with its own character, tone, and feel. Drag the slider to compare them side by side.</p>
       </div>
 
       <div class="wood-tabs" role="tablist" aria-label="Wood type selector">
@@ -135,15 +135,25 @@
       </div>
 
       <div class="wood-showcase">
-        <div class="wood-showcase-img">
-          <div class="wood-img-panel active" data-wood="maple">
-            <img src="https://i.etsystatic.com/64682766/r/il/32a416/7861007734/il_fullxfull.7861007734_cdm0.jpg" alt="Solid maple wood rocking horse" />
+        <div class="wood-showcase-img-outer">
+          <div class="wood-showcase-img">
+            <div class="wood-img-panel" data-wood="maple" style="opacity:1;">
+              <img src="https://images.unsplash.com/photo-1517159098160-ad38084c93de?w=900&auto=format&fit=crop&q=80" alt="Hard maple wood grain texture" />
+            </div>
+            <div class="wood-img-panel" data-wood="walnut" style="opacity:0;">
+              <img src="https://images.unsplash.com/photo-1650831341546-d4b74964a036?w=900&auto=format&fit=crop&q=80" alt="Black walnut wood grain texture" />
+            </div>
+            <div class="wood-img-panel" data-wood="cherry" style="opacity:0;">
+              <img src="https://images.unsplash.com/photo-1601063936640-a0e4e4ed081c?w=900&auto=format&fit=crop&q=80" alt="Black cherry wood grain texture" />
+            </div>
           </div>
-          <div class="wood-img-panel" data-wood="walnut">
-            <img src="https://i.etsystatic.com/64682766/r/il/3a7581/7840054210/il_fullxfull.7840054210_au9e.jpg" alt="Solid walnut kids tool set" />
-          </div>
-          <div class="wood-img-panel" data-wood="cherry">
-            <img src="https://i.etsystatic.com/64682766/r/il/f7f8a8/7739922546/il_fullxfull.7739922546_lskl.jpg" alt="Solid cherry book rest" />
+          <div class="wood-slider-wrap">
+            <input type="range" class="wood-slider" id="woodSlider" min="0" max="100" value="0" step="1" aria-label="Slide to compare wood types" />
+            <div class="wood-slider-labels">
+              <span>Maple</span>
+              <span>Walnut</span>
+              <span>Cherry</span>
+            </div>
           </div>
         </div>
 
@@ -157,7 +167,6 @@
               <div class="wood-detail"><span>Character</span> Fine grain, tight texture</div>
               <div class="wood-detail"><span>Best for</span> Toys, name signs, trivets</div>
             </div>
-            <a href="shop.html" class="btn btn-outline">Shop Maple Pieces &rarr;</a>
           </div>
 
           <div class="wood-info-panel" data-wood="walnut">
@@ -169,7 +178,6 @@
               <div class="wood-detail"><span>Character</span> Bold grain, rich figure</div>
               <div class="wood-detail"><span>Best for</span> Tool sets, trays, risers</div>
             </div>
-            <a href="shop.html" class="btn btn-outline">Shop Walnut Pieces &rarr;</a>
           </div>
 
           <div class="wood-info-panel" data-wood="cherry">
@@ -181,7 +189,6 @@
               <div class="wood-detail"><span>Character</span> Smooth, even grain</div>
               <div class="wood-detail"><span>Best for</span> Book rests, home decor</div>
             </div>
-            <a href="shop.html" class="btn btn-outline">Shop Cherry Pieces &rarr;</a>
           </div>
         </div>
       </div>

@@ -487,21 +487,66 @@ const observer = new IntersectionObserver((entries) => {
   const tabs       = document.querySelectorAll('.wood-tab');
   const imgPanels  = document.querySelectorAll('.wood-img-panel');
   const infoPanels = document.querySelectorAll('.wood-info-panel');
+  const slider     = document.getElementById('woodSlider');
   if (!section || !tabs.length) return;
 
-  function activate(wood) {
-    section.dataset.active = wood;
+  // Slider centers: maple=0, walnut=50, cherry=100
+  const WOOD_ORDER = ['maple', 'walnut', 'cherry'];
+  const CENTERS    = { maple: 0, walnut: 50, cherry: 100 };
+
+  // Triangle-blend opacity: peaks at center, falls off to 0 at ±50
+  function blendOpacity(wood, value) {
+    return Math.max(0, 1 - Math.abs(value - CENTERS[wood]) / 50);
+  }
+
+  function applySlider(value) {
+    imgPanels.forEach(p => {
+      p.style.opacity = blendOpacity(p.dataset.wood, value);
+    });
+    // Determine dominant wood for tab highlight and info panel
+    const dominant = WOOD_ORDER.reduce((best, w) =>
+      blendOpacity(w, value) > blendOpacity(best, value) ? w : best
+    , 'maple');
+    updateTabs(dominant);
+    updateInfoPanels(dominant);
+    section.dataset.active = dominant;
+  }
+
+  function updateTabs(wood) {
     tabs.forEach(t => {
       const on = t.dataset.wood === wood;
       t.classList.toggle('active', on);
       t.setAttribute('aria-selected', on);
     });
-    imgPanels.forEach(p  => p.classList.toggle('active', p.dataset.wood === wood));
+  }
+
+  function updateInfoPanels(wood) {
     infoPanels.forEach(p => p.classList.toggle('active', p.dataset.wood === wood));
   }
 
-  tabs.forEach(tab => tab.addEventListener('click', () => activate(tab.dataset.wood)));
-  activate('maple'); // default
+  // Slider events
+  if (slider) {
+    slider.addEventListener('input', () => applySlider(Number(slider.value)));
+    // Snap to nearest wood on release
+    slider.addEventListener('change', () => {
+      const v = Number(slider.value);
+      const snapped = WOOD_ORDER.reduce((best, w) =>
+        Math.abs(CENTERS[w] - v) < Math.abs(CENTERS[best] - v) ? w : best
+      , 'maple');
+      slider.value = CENTERS[snapped];
+      applySlider(CENTERS[snapped]);
+    });
+  }
+
+  // Tab clicks — jump slider to that wood's center
+  tabs.forEach(tab => tab.addEventListener('click', () => {
+    const wood = tab.dataset.wood;
+    if (slider) slider.value = CENTERS[wood];
+    applySlider(CENTERS[wood]);
+  }));
+
+  // Init: maple
+  applySlider(0);
 }());
 
 document.querySelectorAll('.product-card, .craft-card, .wood-card, .review-card').forEach(el => {
