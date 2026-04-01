@@ -116,7 +116,7 @@
       <div class="section-header">
         <span class="section-label">Choose Your Wood</span>
         <h2>Every Grain Tells a Different Story</h2>
-        <p>Three premium hardwoods, each with its own character, tone, and feel. Drag the slider to compare them side by side.</p>
+        <p>Four premium hardwoods, each with its own character, tone, and feel. Drag the slider to compare them side by side.</p>
       </div>
 
       <div class="wood-tabs" role="tablist" aria-label="Wood type selector">
@@ -127,6 +127,10 @@
         <button class="wood-tab" data-wood="walnut" role="tab" aria-selected="false">
           <span class="wood-tab-swatch" style="background:#3D2B1F;"></span>
           Black Walnut
+        </button>
+        <button class="wood-tab" data-wood="white-oak" role="tab" aria-selected="false">
+          <span class="wood-tab-swatch" style="background:#c49a6c;"></span>
+          White Oak
         </button>
         <button class="wood-tab" data-wood="cherry" role="tab" aria-selected="false">
           <span class="wood-tab-swatch" style="background:#b0603a;"></span>
@@ -140,6 +144,9 @@
             <div class="wood-img-panel" data-wood="maple" style="opacity:1;">
               <img src="https://images.unsplash.com/photo-1517159098160-ad38084c93de?w=900&auto=format&fit=crop&q=80" alt="Hard maple wood grain texture" />
             </div>
+            <div class="wood-img-panel" data-wood="white-oak" style="opacity:0;">
+              <img src="https://images.unsplash.com/photo-1763392199003-27cee33bae31?w=900&auto=format&fit=crop&q=80" alt="White oak wood grain texture" />
+            </div>
             <div class="wood-img-panel" data-wood="walnut" style="opacity:0;">
               <img src="https://images.unsplash.com/photo-1650831341546-d4b74964a036?w=900&auto=format&fit=crop&q=80" alt="Black walnut wood grain texture" />
             </div>
@@ -151,6 +158,7 @@
             <input type="range" class="wood-slider" id="woodSlider" min="0" max="100" value="0" step="1" aria-label="Slide to compare wood types" />
             <div class="wood-slider-labels">
               <span>Maple</span>
+              <span>White Oak</span>
               <span>Walnut</span>
               <span>Cherry</span>
             </div>
@@ -166,6 +174,17 @@
               <div class="wood-detail"><span>Tone</span> Light Cream → Warm Honey</div>
               <div class="wood-detail"><span>Character</span> Fine grain, tight texture</div>
               <div class="wood-detail"><span>Best for</span> Toys, name signs, trivets</div>
+            </div>
+          </div>
+
+          <div class="wood-info-panel" data-wood="white-oak">
+            <div class="wood-info-swatch" style="background:#c49a6c;"></div>
+            <h3>White Oak</h3>
+            <p>The most versatile hardwood in the shop. White oak sits right between maple and walnut — warm tan with a golden undertone, open grain, and the iconic ray fleck figure that sets it apart. Strong, stable, and beautiful in any finish.</p>
+            <div class="wood-info-details">
+              <div class="wood-detail"><span>Tone</span> Warm Tan → Golden Honey</div>
+              <div class="wood-detail"><span>Character</span> Open grain, ray fleck figure</div>
+              <div class="wood-detail"><span>Best for</span> Trays, risers, home accents</div>
             </div>
           </div>
 

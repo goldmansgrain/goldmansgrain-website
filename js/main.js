@@ -490,13 +490,13 @@ const observer = new IntersectionObserver((entries) => {
   const slider     = document.getElementById('woodSlider');
   if (!section || !tabs.length) return;
 
-  // Slider centers: maple=0, walnut=50, cherry=100
-  const WOOD_ORDER = ['maple', 'walnut', 'cherry'];
-  const CENTERS    = { maple: 0, walnut: 50, cherry: 100 };
+  // Slider centers: maple=0, white-oak=33, walnut=67, cherry=100
+  const WOOD_ORDER = ['maple', 'white-oak', 'walnut', 'cherry'];
+  const CENTERS    = { maple: 0, 'white-oak': 33, walnut: 67, cherry: 100 };
 
-  // Triangle-blend opacity: peaks at center, falls off to 0 at ±50
+  // Triangle-blend opacity: peaks at center, falls off to 0 at ±34
   function blendOpacity(wood, value) {
-    return Math.max(0, 1 - Math.abs(value - CENTERS[wood]) / 50);
+    return Math.max(0, 1 - Math.abs(value - CENTERS[wood]) / 34);
   }
 
   function applySlider(value) {
