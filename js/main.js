@@ -577,3 +577,128 @@ document.querySelectorAll('.product-card, .craft-card, .wood-card, .review-card'
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
   observer.observe(el);
 });
+
+// ── Email Capture ───────────────────────────────────────────────
+// SETUP: Create a free form at https://formspree.io (use your goldmangrains@gmail.com)
+//        Name it "Email Subscribers", then paste the form ID below.
+//        Also create a coupon code "WELCOME10" (10% off) in your Etsy shop:
+//        Etsy → Shop Manager → Marketing → Sales & Coupons → Create coupon
+const EMAIL_ENDPOINT = 'https://formspree.io/f/YOUR_EMAIL_FORM_ID';
+const EMAIL_KEY      = 'gg_email';
+const DISCOUNT_CODE  = 'WELCOME10';
+
+(function () {
+  // ── Check if already handled ──────────────────────────────────
+  const stored = localStorage.getItem(EMAIL_KEY);
+  if (stored) {
+    try {
+      const { state, ts } = JSON.parse(stored);
+      if (state === 'subscribed') return;
+      if (state === 'dismissed' && (Date.now() - ts) < 7 * 24 * 60 * 60 * 1000) return;
+    } catch (_) { /* ignore bad data */ }
+  }
+
+  // ── Shared submit handler (used by both popup and footer strip) ─
+  async function handleEmailSubmit(form, onSuccess, onError) {
+    const input = form.querySelector('input[type="email"]');
+    const btn   = form.querySelector('button[type="submit"]');
+    if (!input || !input.value) return;
+    btn.disabled    = true;
+    btn.textContent = 'Sending…';
+    try {
+      const res = await fetch(EMAIL_ENDPOINT, {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body:    JSON.stringify({ email: input.value, source: form.dataset.emailForm || 'unknown', _subject: 'New Email Subscriber — Goldman\'s Grain' }),
+      });
+      if (res.ok) {
+        localStorage.setItem(EMAIL_KEY, JSON.stringify({ state: 'subscribed', ts: Date.now() }));
+        onSuccess();
+      } else { throw new Error(); }
+    } catch (_) {
+      btn.disabled    = false;
+      btn.textContent = 'Try Again';
+      onError();
+    }
+  }
+
+  // ── Footer strip forms ────────────────────────────────────────
+  document.querySelectorAll('[data-email-form]').forEach(form => {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const wrap    = form.closest('.email-strip-inner') || form.parentElement;
+      const success = wrap.querySelector('.email-strip-success');
+      handleEmailSubmit(form,
+        () => { form.style.display = 'none'; if (success) success.classList.add('show'); },
+        () => {}
+      );
+    });
+  });
+
+  // ── Popup ─────────────────────────────────────────────────────
+  // Don't show popup on contact page (they're already engaging)
+  if (window.location.pathname.includes('contact')) return;
+
+  const popup = document.createElement('div');
+  popup.id        = 'emailPopup';
+  popup.className = 'email-popup';
+  popup.setAttribute('role', 'dialog');
+  popup.setAttribute('aria-label', 'Get 10% off your first order');
+  popup.innerHTML = `
+    <button class="email-popup-close" id="emailPopupClose" aria-label="Close offer">✕</button>
+    <div class="email-popup-logo">Goldman's Grain</div>
+    <h3>Get 10% Off Your First Order</h3>
+    <p>Join the list for new drops, early access to custom orders, and exclusive discounts.</p>
+    <form class="email-popup-form" id="emailPopupForm" data-email-form="popup">
+      <input type="email" name="email" placeholder="Your email address" required autocomplete="email" />
+      <button type="submit">Claim 10% Off &rarr;</button>
+    </form>
+    <div class="email-popup-success" id="emailPopupSuccess">
+      <p>🎉 You&rsquo;re in!<br>Use code <strong>${DISCOUNT_CODE}</strong> at checkout.</p>
+    </div>
+    <p class="email-popup-fine">No spam, ever. Unsubscribe anytime.</p>
+  `;
+  document.body.appendChild(popup);
+
+  function showPopup() {
+    popup.classList.add('is-visible');
+    triggered = true;
+  }
+  function hidePopup() {
+    popup.classList.remove('is-visible');
+  }
+
+  let triggered = false;
+
+  document.getElementById('emailPopupClose').addEventListener('click', () => {
+    hidePopup();
+    localStorage.setItem(EMAIL_KEY, JSON.stringify({ state: 'dismissed', ts: Date.now() }));
+  });
+
+  document.getElementById('emailPopupForm').addEventListener('submit', e => {
+    e.preventDefault();
+    handleEmailSubmit(
+      document.getElementById('emailPopupForm'),
+      () => {
+        document.getElementById('emailPopupForm').style.display = 'none';
+        document.getElementById('emailPopupSuccess').classList.add('show');
+        setTimeout(hidePopup, 5000);
+      },
+      () => {}
+    );
+  });
+
+  // Trigger 1: scroll past 45% of page
+  function onScroll() {
+    if (triggered) return;
+    const scrolled = window.scrollY + window.innerHeight;
+    const total    = document.documentElement.scrollHeight;
+    if (scrolled / total > 0.45) showPopup();
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Trigger 2: exit intent (desktop — mouse leaves viewport toward top)
+  document.addEventListener('mouseleave', e => {
+    if (!triggered && e.clientY <= 0) showPopup();
+  });
+}());
