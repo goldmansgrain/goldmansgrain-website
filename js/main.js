@@ -222,6 +222,28 @@ const PRODUCTS = {
     ],
     etsyLink: 'https://www.etsy.com/listing/4466760281/handmade-solid-walnut-bunny-treat-tray',
   },
+  'toy-car': {
+    title: 'Solid Hardwood Toy Car with Removable Canoe',
+    material: 'Solid Maple · Solid Walnut',
+    price: '$29.00',
+    images: [
+      'https://i.etsystatic.com/64682766/r/il/367a2b/7867504886/il_fullxfull.7867504886_a0va.jpg',
+      'https://i.etsystatic.com/64682766/r/il/f0290d/7915467733/il_fullxfull.7915467733_eizc.jpg',
+      'https://i.etsystatic.com/64682766/r/il/472403/7867505080/il_fullxfull.7867505080_4arb.jpg',
+      'https://i.etsystatic.com/64682766/r/il/a6c87d/7915459643/il_fullxfull.7915459643_rn8a.jpg',
+    ],
+    description: 'Adventure awaits with the GoldmanGrains Overlander. Built for the little explorer with a big imagination. Designed for hands-on discovery, it features a removable roof-mounted canoe and a detachable spare tire on the back.\n\nUnlike mass-produced plastic toys, our Overlander is a heirloom-quality piece built to be passed down through generations. Every curve is smooth, every detail intentional — cut from solid North American hardwood and finished with food-safe oil.\n\nWant it personalised? Add a name, initials, or birth year — message us before ordering and we\'ll work it in.',
+    specs: [
+      '100% Solid Maple or Walnut Hardwood',
+      'Approx. 6″ × 7″ × ¾″ thick',
+      'Removable roof-mounted canoe + spare tire detail',
+      'Food-safe oil finish — non-toxic, baby safe',
+      'Made to order in Raleigh, NC',
+      'Free shipping · Returns accepted within 30 days',
+    ],
+    stripeLink: 'https://buy.stripe.com/dRm14nddq9Xd1HybPyaIM0e',
+    etsyLink: 'https://www.etsy.com/listing/4481424383/solid-hardwood-toy-car-with-removable',
+  },
 };
 
 // ── Product Modal ───────────────────────────────────────────────
