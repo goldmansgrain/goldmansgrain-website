@@ -481,6 +481,29 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
+// ── Wood Selector ──────────────────────────────────────────────
+(function () {
+  const section    = document.querySelector('.wood-selector-section');
+  const tabs       = document.querySelectorAll('.wood-tab');
+  const imgPanels  = document.querySelectorAll('.wood-img-panel');
+  const infoPanels = document.querySelectorAll('.wood-info-panel');
+  if (!section || !tabs.length) return;
+
+  function activate(wood) {
+    section.dataset.active = wood;
+    tabs.forEach(t => {
+      const on = t.dataset.wood === wood;
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', on);
+    });
+    imgPanels.forEach(p  => p.classList.toggle('active', p.dataset.wood === wood));
+    infoPanels.forEach(p => p.classList.toggle('active', p.dataset.wood === wood));
+  }
+
+  tabs.forEach(tab => tab.addEventListener('click', () => activate(tab.dataset.wood)));
+  activate('maple'); // default
+}());
+
 document.querySelectorAll('.product-card, .craft-card, .wood-card, .review-card').forEach(el => {
   el.style.opacity   = '0';
   el.style.transform = 'translateY(24px)';
