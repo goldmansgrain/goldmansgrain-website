@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18054658692"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18054658692');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How It's Made — Goldman's Grain | Handcrafted Hardwood Process</title>
+  <meta name="description" content="See exactly how Goldman's Grain pieces are made — from hand-selecting solid hardwood planks to the final food-safe oil finish. No shortcuts, no plywood, no stains." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── Process page ── */
+    .process-intro {
+      max-width: 660px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 4rem 0 3rem;
+    }
+    .process-intro .section-label { margin-bottom: .6rem; }
+    .process-intro h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 1rem;
+    }
+    .process-intro p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+    }
+
+    /* Steps */
+    .process-steps { padding: 0 0 5rem; }
+    .process-step {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      padding: 4rem 0;
+      border-top: 1px solid var(--border);
+    }
+    .process-step:first-child { border-top: none; }
+    .process-step.reverse .process-step-img { order: 2; }
+    .process-step.reverse .process-step-body { order: 1; }
+
+    .process-step-img {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      box-shadow: var(--shadow-lg);
+    }
+    .process-step-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .process-step-number {
+      font-family: var(--font-heading);
+      font-size: 5rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--border);
+      margin-bottom: .5rem;
+      display: block;
+    }
+    .process-step-body h2 {
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      color: var(--walnut);
+      margin-bottom: 1rem;
+    }
+    .process-step-body p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .process-step-body p:last-child { margin-bottom: 0; }
+    .process-detail-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-top: 1.25rem;
+    }
+    .process-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--walnut);
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: .3rem .85rem;
+    }
+
+    /* Promise strip */
+    .process-promise {
+      background: var(--walnut);
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .process-promise h2 { color: var(--cream); margin-bottom: .75rem; }
+    .process-promise p { color: rgba(245,230,200,.72); font-size: 1rem; max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.75; }
+    .promise-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .promise-item { text-align: center; }
+    .promise-icon { font-size: 1.75rem; margin-bottom: .6rem; display: block; }
+    .promise-item strong { display: block; color: var(--maple); font-size: .85rem; font-weight: 700; letter-spacing: .04em; margin-bottom: .25rem; }
+    .promise-item span { font-size: .8rem; color: rgba(245,230,200,.55); line-height: 1.5; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .process-intro { padding: 2.5rem 0 2rem; }
+      .process-steps { padding-bottom: 3rem; }
+      .process-step {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 3rem 0;
+      }
+      .process-step.reverse .process-step-img { order: 0; }
+      .process-step.reverse .process-step-body { order: 1; }
+      .process-step-number { font-size: 3.5rem; }
+      .promise-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .promise-grid { grid-template-columns: 1fr 1fr; }
+      .process-promise { padding: 3rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="nav-logo">
+          <span class="brand-name">Goldman's Grain</span>
+          <span class="brand-tagline">Solid Hardwood · Raleigh, NC</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="process.html" class="active">How It's Made</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://www.etsy.com/shop/GoldmansGrain" target="_blank" class="nav-cta">Personalize on Etsy ↗</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Craft & Process</span>
+      <h1>How It's Made</h1>
+      <p>No shortcuts. No plywood. No stains to fake a look the wood doesn't have. Here's exactly what happens between a raw plank and your front door.</p>
+    </div>
+  </section>
+
+  <!-- ===== INTRO ===== -->
+  <div class="container">
+    <div class="process-intro">
+      <span class="section-label">From Lumber to Heirloom</span>
+      <h1>Six Steps. One Standard.</h1>
+      <p>Every Goldman's Grain piece — whether it's a rocking horse, a name sign, or a toy car — goes through the same process. Solid hardwood, hand-selected. Cut and shaped to spec. Sanded through every grit until it's silk-smooth. Finished with food-safe oil that brings out the real color of the wood. Made to order in Raleigh, NC.</p>
+    </div>
+  </div>
+
+  <!-- ===== STEPS ===== -->
+  <div class="process-steps">
+    <div class="container">
+
+      <!-- Step 1 -->
+      <div class="process-step">
+        <div class="process-step-img">
+          <img src="https://images.unsplash.com/photo-1685022515790-28eddf510f24?w=900&auto=format&fit=crop&q=80" alt="Planning and measuring a piece of wood with a pencil" />
+        </div>
+        <div class="process-step-body">
+          <span class="process-step-number">01</span>
+          <h2>Every Piece Starts With a Plan</h2>
+          <p>Before any wood gets touched, we sketch out dimensions, think through grain direction, and figure out exactly how each part will be cut and assembled. Small decisions here — like which way the grain runs on a toy horse or name sign — make a real difference in the finished piece.</p>
+          <p>For custom orders, this is where we work out your personalization details too: letter spacing on name signs, sizing for specific age groups, or any modifications from the standard design.</p>
+          <div class="process-detail-chips">
+            <span class="process-chip">Custom sizing</span>
+            <span class="process-chip">Grain direction</span>
+            <span class="process-chip">Made to order</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="process-step reverse">
+        <div class="process-step-img">
+          <img src="https://images.unsplash.com/photo-1656774423962-0bfb4591aa9b?w=900&auto=format&fit=crop&q=80" alt="Stacked solid hardwood planks ready for selection" />
+        </div>
+        <div class="process-step-body">
+          <span class="process-step-number">02</span>
+          <h2>Hand-Picked Hardwood — Nothing Else</h2>
+          <p>Not all hardwood is the same. We source solid maple, walnut, cherry, and white oak from trusted suppliers — no plywood cores, no MDF, no veneers, no engineered composites. Ever.</p>
+          <p>We pick each plank for grain, color, and character. The wood you see on your finished piece is the same solid board we selected at the start. What you see is what it is, all the way through.</p>
+          <div class="process-detail-chips">
+            <span class="process-chip">Hard Maple</span>
+            <span class="process-chip">Black Walnut</span>
+            <span class="process-chip">Black Cherry</span>
+            <span class="process-chip">White Oak</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="process-step">
+        <div class="process-step-img">
+          <img src="https://images.unsplash.com/photo-1745017226333-af762caf03f3?w=900&auto=format&fit=crop&q=80" alt="Hands shaping and carving a piece of wood by hand" />
+        </div>
+        <div class="process-step-body">
+          <span class="process-step-number">03</span>
+          <h2>Cut and Shaped to Spec</h2>
+          <p>Each piece is cut on the table saw or band saw, then shaped with a router, jig, or carving tool depending on the design. A rocking horse has different curves than a name sign or a toy car — but every single cut gets the same level of attention.</p>
+          <p>We don't outsource cutting or use pre-cut blanks. Every part is made from scratch, to spec, in the shop. That's what lets us offer real customization on almost everything.</p>
+          <div class="process-detail-chips">
+            <span class="process-chip">Table saw</span>
+            <span class="process-chip">Band saw</span>
+            <span class="process-chip">Hand tools</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="process-step reverse">
+        <div class="process-step-img">
+          <img src="https://images.unsplash.com/photo-1698768195684-c4ec53b994b3?w=900&auto=format&fit=crop&q=80" alt="Hands sanding a piece of wood smooth by hand" />
+        </div>
+        <div class="process-step-body">
+          <span class="process-step-number">04</span>
+          <h2>Sanded Until It's Silk-Smooth</h2>
+          <p>Every surface goes through multiple grits of sandpaper — starting coarse to remove tool marks, working up to fine for the texture that makes people want to pick it up and feel it again. No shortcuts on grit progression.</p>
+          <p>Every edge is eased so there are no sharp corners anywhere on the piece. That matters most when the people using it are small children. Smooth enough that you'd hand it to a toddler without a second thought.</p>
+          <div class="process-detail-chips">
+            <span class="process-chip">Multi-grit sanding</span>
+            <span class="process-chip">Eased edges</span>
+            <span class="process-chip">Baby safe</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="process-step">
+        <div class="process-step-img">
+          <img src="https://images.unsplash.com/photo-1599651993975-30a482e26467?w=900&auto=format&fit=crop&q=80" alt="Applying food-safe oil finish to a wood piece" />
+        </div>
+        <div class="process-step-body">
+          <span class="process-step-number">05</span>
+          <h2>Finished With Food-Safe Oil</h2>
+          <p>We finish every piece with a natural, food-safe oil — no polyurethane, no lacquer, no stains. The oil soaks into the grain, brings out the real depth and color of the wood, and protects it without building up a plastic-feeling surface coat.</p>
+          <p>It's completely non-toxic and safe for babies and toddlers. And unlike surface finishes that peel over time, an oil finish actually improves with use. A quick re-oil every year or two and your piece looks better than when it arrived.</p>
+          <div class="process-detail-chips">
+            <span class="process-chip">Non-toxic</span>
+            <span class="process-chip">Food-safe</span>
+            <span class="process-chip">No stains</span>
+            <span class="process-chip">No lacquer</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 6 -->
+      <div class="process-step reverse">
+        <div class="process-step-img">
+          <img src="https://i.etsystatic.com/64682766/r/il/367a2b/7867504886/il_fullxfull.7867504886_a0va.jpg" alt="Finished solid hardwood toy car — Goldman's Grain" />
+        </div>
+        <div class="process-step-body">
+          <span class="process-step-number">06</span>
+          <h2>Inspected, Packed, and Shipped Free</h2>
+          <p>Before anything leaves the shop, every piece gets a final check — surface, edges, finish quality, and fit on anything with moving parts. If it's not right, it doesn't ship. No exceptions.</p>
+          <p>Then it's packed carefully and shipped free to your door, anywhere in the US. Most orders are out the door within a week. Custom and personalized pieces are typically the same — we build fast because we build one at a time, to order, not in batches sitting on a shelf.</p>
+          <div class="process-detail-chips">
+            <span class="process-chip">Free shipping</span>
+            <span class="process-chip">Ships in ~1 week</span>
+            <span class="process-chip">30-day returns</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== PROMISE STRIP ===== -->
+  <section class="process-promise">
+    <div class="container">
+      <span class="section-label" style="color:var(--maple);">The Goldman's Grain Standard</span>
+      <h2>What Every Piece Guarantees</h2>
+      <p>These aren't marketing words. They're the actual standards every piece is held to before it leaves the shop.</p>
+      <div class="promise-grid">
+        <div class="promise-item">
+          <span class="promise-icon">🪵</span>
+          <strong>100% Solid Hardwood</strong>
+          <span>No plywood, MDF, or engineered composites. Ever.</span>
+        </div>
+        <div class="promise-item">
+          <span class="promise-icon">🛡️</span>
+          <strong>Non-Toxic Finish</strong>
+          <span>Food-safe oil only. Safe for babies and toddlers.</span>
+        </div>
+        <div class="promise-item">
+          <span class="promise-icon">📍</span>
+          <strong>Made in Raleigh, NC</strong>
+          <span>Every piece cut, shaped, and finished in our shop.</span>
+        </div>
+        <div class="promise-item">
+          <span class="promise-icon">📦</span>
+          <strong>Free Shipping</strong>
+          <span>Ships free to any address in the United States.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="custom-cta">
+    <div class="container">
+      <div class="custom-cta-inner">
+        <span class="section-label">Ready to Order?</span>
+        <h2>See the Finished Pieces</h2>
+        <p>Now that you know what goes into them — shop the full collection or reach out about a custom order.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="shop.html" class="btn btn-primary">Shop All Products &rarr;</a>
+          <a href="contact.html" class="btn" style="background:transparent;border:2px solid rgba(255,255,255,.3);color:#fff;">Custom Order</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EMAIL SIGNUP ===== -->
+  <section class="email-strip">
+    <div class="container">
+      <div class="email-strip-inner">
+        <div class="email-strip-text">
+          <h3>Get 10% Off Your First Order</h3>
+          <p>Join the list for new product drops, early access to custom orders, and exclusive discounts.</p>
+        </div>
+        <form class="email-strip-form" data-email-form="footer-process">
+          <input type="email" name="email" placeholder="Your email address" required autocomplete="email" />
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+        <div class="email-strip-success">
+          <p>🎉 You're in! Use code <strong>WELCOME10</strong> at checkout for 10% off.</p>
+        </div>
+        <p class="email-strip-note">No spam, ever. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-name">Goldman's Grain</span>
+          <span class="brand-tagline">Solid Hardwood · Zero Plywood</span>
+          <p>Heirloom hardwood toys and goods made to order in Raleigh, NC. Maple, walnut, cherry, and oak — built to last generations.</p>
+          <div class="footer-location">
+            <span>📍</span> Raleigh, North Carolina
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html">All Products</a></li>
+            <li><a href="shop.html">Kids &amp; Toys</a></li>
+            <li><a href="shop.html">Kitchen &amp; Home</a></li>
+            <li><a href="shop.html">Signs &amp; Decor</a></li>
+            <li><a href="https://www.etsy.com/shop/GoldmansGrain" target="_blank">Custom Orders ↗</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="about.html">About Brenden</a></li>
+            <li><a href="process.html">How It's Made</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://www.etsy.com/shop/GoldmansGrain" target="_blank">Etsy Shop ↗</a></li>
+            <li><a href="https://www.instagram.com/goldmans_grain/" target="_blank">Instagram ↗</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Goldman's Grain. Handcrafted in Raleigh, NC.</p>
+        <p>Sold on <a href="https://www.etsy.com/shop/GoldmansGrain" target="_blank">Etsy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

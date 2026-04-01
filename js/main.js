@@ -583,7 +583,7 @@ document.querySelectorAll('.product-card, .craft-card, .wood-card, .review-card'
 //        Name it "Email Subscribers", then paste the form ID below.
 //        Also create a coupon code "WELCOME10" (10% off) in your Etsy shop:
 //        Etsy → Shop Manager → Marketing → Sales & Coupons → Create coupon
-const EMAIL_ENDPOINT = 'https://formspree.io/f/YOUR_EMAIL_FORM_ID';
+const EMAIL_ENDPOINT = 'https://formspree.io/f/mojplzlp';
 const EMAIL_KEY      = 'gg_email';
 const DISCOUNT_CODE  = 'WELCOME10';
 
