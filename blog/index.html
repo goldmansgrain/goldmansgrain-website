@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18054658692"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18054658692');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Goldman's Grain | Handcrafted Hardwood Toys &amp; Goods</title>
+  <meta name="description" content="Tips, guides, and stories from the Goldman's Grain workshop. Learn about solid hardwood toys, Montessori play, and why real wood matters." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 2rem;
+      padding: 4rem 0;
+    }
+    .blog-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .blog-card-img {
+      aspect-ratio: 16/9;
+      overflow: hidden;
+    }
+    .blog-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s ease;
+    }
+    .blog-card:hover .blog-card-img img { transform: scale(1.05); }
+    .blog-card-body {
+      padding: 1.5rem;
+    }
+    .blog-card-date {
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--maple);
+      margin-bottom: .4rem;
+    }
+    .blog-card-body h3 {
+      font-size: 1.15rem;
+      color: var(--walnut);
+      margin-bottom: .6rem;
+      line-height: 1.35;
+    }
+    .blog-card-body p {
+      font-size: .88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .blog-card-link {
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--sage);
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      transition: gap var(--transition), color var(--transition);
+    }
+    .blog-card-link:hover { gap: .55rem; color: var(--walnut); }
+    @media (max-width: 480px) {
+      .blog-grid { grid-template-columns: 1fr; padding: 2.5rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="../index.html" class="nav-logo">
+          <span class="brand-name">Goldman's Grain</span>
+          <span class="brand-tagline">Solid Hardwood · Raleigh, NC</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../shop.html">Shop</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../process.html">How It's Made</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="https://www.etsy.com/shop/GoldmansGrain" target="_blank" class="nav-cta">Personalize on Etsy ↗</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label" style="color:var(--maple);">Goldman's Grain Blog</span>
+      <h1>Stories from the Workshop</h1>
+      <p>Tips, guides, and the thinking behind every piece we make.</p>
+    </div>
+  </section>
+
+  <!-- ===== BLOG GRID ===== -->
+  <section>
+    <div class="container">
+      <div class="blog-grid">
+
+        <a href="best-wooden-toys-for-toddlers.html" class="blog-card">
+          <div class="blog-card-img">
+            <img src="https://i.etsystatic.com/64682766/r/il/39c912/7876038325/il_fullxfull.7876038325_pc74.jpg" alt="Solid walnut and maple building blocks" loading="lazy" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-date">April 2026</div>
+            <h3>The 5 Best Wooden Toys for Toddlers (And Why They Beat Plastic)</h3>
+            <p>A parent's guide to choosing toys that are safe, durable, and actually worth keeping. Spoiler: solid hardwood wins every time.</p>
+            <span class="blog-card-link">Read More →</span>
+          </div>
+        </a>
+
+        <a href="why-solid-hardwood.html" class="blog-card">
+          <div class="blog-card-img">
+            <img src="https://i.etsystatic.com/64682766/r/il/3a7581/7840054210/il_fullxfull.7840054210_au9e.jpg" alt="Solid walnut kids tool set" loading="lazy" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-date">March 2026</div>
+            <h3>Why We Only Use Solid Hardwood (And What That Actually Means)</h3>
+            <p>MDF, plywood, "engineered wood" — the toy industry uses a lot of words to avoid saying "not real wood." Here's how to tell the difference.</p>
+            <span class="blog-card-link">Read More →</span>
+          </div>
+        </a>
+
+        <a href="montessori-toy-guide.html" class="blog-card">
+          <div class="blog-card-img">
+            <img src="https://i.etsystatic.com/64682766/r/il/2b547f/7859011140/il_fullxfull.7859011140_441g.jpg" alt="Hardwood animal figures for Montessori play" loading="lazy" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-card-date">March 2026</div>
+            <h3>A Beginner's Guide to Montessori Toys: What to Buy and What to Skip</h3>
+            <p>Montessori is everywhere right now, but most "Montessori toys" on Amazon aren't. Here's what actually matters when choosing toys that encourage real play.</p>
+            <span class="blog-card-link">Read More →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EMAIL SIGNUP ===== -->
+  <section class="email-strip">
+    <div class="container">
+      <div class="email-strip-inner">
+        <div class="email-strip-text">
+          <h3>Get 10% Off Your First Order</h3>
+          <p>Join the list for new product drops, early access to custom orders, and exclusive discounts.</p>
+        </div>
+        <form class="email-strip-form" data-email-form="footer-blog">
+          <input type="email" name="email" placeholder="Your email address" required autocomplete="email" />
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+        <div class="email-strip-success">
+          <p>🎉 You're in! Use code <strong>WELCOME10</strong> at checkout for 10% off.</p>
+        </div>
+        <p class="email-strip-note">No spam, ever. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-name">Goldman's Grain</span>
+          <span class="brand-tagline">Solid Hardwood · Zero Plywood</span>
+          <p>Heirloom hardwood toys and goods made to order in Raleigh, NC. Maple, walnut, cherry, and oak — built to last generations.</p>
+          <div class="footer-location">
+            <span>📍</span> Raleigh, North Carolina
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="../shop.html">All Products</a></li>
+            <li><a href="../shop.html">Kids &amp; Toys</a></li>
+            <li><a href="../shop.html">Kitchen &amp; Home</a></li>
+            <li><a href="../shop.html">Signs &amp; Decor</a></li>
+            <li><a href="https://www.etsy.com/shop/GoldmansGrain" target="_blank">Custom Orders ↗</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="../about.html">About Brenden</a></li>
+            <li><a href="../process.html">How It's Made</a></li>
+            <li><a href="../about.html#woods">Our Woods</a></li>
+            <li><a href="https://www.etsy.com/shop/GoldmansGrain" target="_blank">Etsy Shop ↗</a></li>
+            <li><a href="https://www.instagram.com/goldmans_grain/" target="_blank">Instagram ↗</a></li>
+            <li><a href="./">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Goldman's Grain. Handcrafted in Raleigh, NC.</p>
+        <p>Sold on <a href="https://www.etsy.com/shop/GoldmansGrain" target="_blank">Etsy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== STICKY MOBILE CTA ===== -->
+  <div class="sticky-mobile-cta" id="stickyCta">
+    <a href="../shop.html" class="btn btn-primary">Shop Now &rarr;</a>
+    <a href="https://www.etsy.com/shop/GoldmansGrain" target="_blank" class="btn btn-outline">Etsy ↗</a>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

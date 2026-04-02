@@ -423,6 +423,8 @@ p  { color: var(--text-muted); }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .4rem;
 }
 .product-price {
   font-size: 1.2rem;
@@ -1707,5 +1709,294 @@ p  { color: var(--text-muted); }
     width: 100%;
     border-radius: var(--radius-lg) var(--radius-lg) 0 0;
     padding: 1.75rem 1.5rem;
+  }
+}
+
+/* ============================================
+   SHIP TIME BADGE
+   ============================================ */
+.ship-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--sage);
+  background: rgba(74,103,65,.1);
+  padding: .3rem .7rem;
+  border-radius: 100px;
+  border: 1px solid rgba(74,103,65,.2);
+}
+.ship-badge-icon {
+  font-style: normal;
+  font-size: .8rem;
+}
+.product-footer .ship-badge {
+  font-size: .62rem;
+  padding: .2rem .55rem;
+}
+/* Hero ship badge */
+.hero-badge .ship-badge {
+  font-size: .65rem;
+  background: rgba(74,103,65,.2);
+  border-color: rgba(74,103,65,.3);
+  color: #9ad18e;
+  margin-top: .35rem;
+}
+
+/* ============================================
+   GIFT SECTION
+   ============================================ */
+.gift-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #fdf8f0 0%, #faf0e0 100%);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.gift-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.gift-content .section-label { color: var(--maple); }
+.gift-content h2 {
+  color: var(--walnut);
+  margin-bottom: .85rem;
+}
+.gift-content > p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+.gift-occasions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: 2rem;
+}
+.gift-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .45rem .9rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--walnut);
+  transition: all var(--transition);
+}
+.gift-tag:hover {
+  background: var(--walnut);
+  color: var(--cream);
+  border-color: var(--walnut);
+}
+.gift-tag-icon { font-style: normal; }
+.gift-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.gift-img {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 1;
+  transition: transform var(--transition);
+}
+.gift-img:hover { transform: translateY(-4px); }
+.gift-img:first-child {
+  grid-row: 1 / 3;
+  aspect-ratio: auto;
+}
+.gift-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .gift-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .gift-images { order: -1; }
+}
+@media (max-width: 480px) {
+  .gift-section { padding: 3rem 0; }
+}
+
+/* ============================================
+   FAQ SECTION
+   ============================================ */
+.faq-section {
+  padding: 5rem 0;
+  background: var(--white);
+}
+.faq-grid {
+  max-width: 780px;
+  margin: 0 auto;
+}
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.4rem 0;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--walnut);
+  transition: color var(--transition);
+}
+.faq-question:hover { color: var(--oak); }
+.faq-icon {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--maple);
+  transition: transform .3s ease;
+  flex-shrink: 0;
+  font-style: normal;
+}
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, padding .35s ease;
+}
+.faq-answer-inner {
+  padding: 0 0 1.4rem;
+  font-size: .92rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+.faq-item.open .faq-answer {
+  max-height: 300px;
+}
+@media (max-width: 480px) {
+  .faq-section { padding: 3rem 0; }
+  .faq-question { font-size: 1rem; padding: 1.1rem 0; }
+}
+
+/* ============================================
+   WORKSHOP / INSTAGRAM GALLERY
+   ============================================ */
+.workshop-section {
+  padding: 5rem 0;
+  background: var(--parchment);
+}
+.workshop-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: .75rem;
+}
+.workshop-img {
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 1;
+  position: relative;
+  cursor: pointer;
+}
+.workshop-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+.workshop-img:hover img { transform: scale(1.08); }
+.workshop-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(61,43,31,.0);
+  transition: background .3s ease;
+}
+.workshop-img:hover::after { background: rgba(61,43,31,.2); }
+.workshop-cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+.workshop-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--oak);
+  transition: color var(--transition), gap var(--transition);
+}
+.workshop-cta a:hover { color: var(--walnut); gap: .75rem; }
+@media (max-width: 768px) {
+  .workshop-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 480px) {
+  .workshop-section { padding: 3rem 0; }
+  .workshop-grid { grid-template-columns: repeat(2, 1fr); gap: .5rem; }
+}
+
+/* ============================================
+   STICKY MOBILE CTA BAR
+   ============================================ */
+.sticky-mobile-cta {
+  display: none;
+}
+@media (max-width: 768px) {
+  .sticky-mobile-cta {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 90;
+    background: var(--walnut);
+    padding: .65rem 1rem;
+    gap: .6rem;
+    box-shadow: 0 -4px 20px rgba(0,0,0,.3);
+    transform: translateY(100%);
+    transition: transform .4s cubic-bezier(.34,1.26,.64,1);
+    border-top: 2px solid var(--maple);
+  }
+  .sticky-mobile-cta.visible {
+    transform: translateY(0);
+  }
+  .sticky-mobile-cta .btn {
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    padding: .7rem .5rem;
+    font-size: .82rem;
+    border-radius: var(--radius);
+  }
+  .sticky-mobile-cta .btn-primary {
+    background: var(--maple);
+    color: var(--walnut);
+    border-color: var(--maple);
+  }
+  .sticky-mobile-cta .btn-primary:hover {
+    background: var(--cream);
+  }
+  .sticky-mobile-cta .btn-outline {
+    color: var(--cream);
+    border-color: rgba(245,230,200,.3);
+    background: transparent;
+  }
+  /* Add bottom padding to body so sticky bar doesn't cover content */
+  body.has-sticky-cta {
+    padding-bottom: 60px;
+  }
+  /* Push email popup above sticky bar on mobile */
+  .email-popup {
+    bottom: 60px !important;
   }
 }

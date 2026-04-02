@@ -578,6 +578,46 @@ document.querySelectorAll('.product-card, .craft-card, .wood-card, .review-card'
   observer.observe(el);
 });
 
+// ── Ship Time Badges ───────────────────────────────────────────
+document.querySelectorAll('.product-footer').forEach(footer => {
+  const badge = document.createElement('span');
+  badge.className = 'ship-badge';
+  badge.innerHTML = '<i class="ship-badge-icon">📦</i> Ships 3–5 Days';
+  footer.appendChild(badge);
+});
+
+// ── FAQ Accordion ──────────────────────────────────────────────
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    // Close all others
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    // Toggle current
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+// ── Sticky Mobile CTA Bar ──────────────────────────────────────
+(function () {
+  const stickyCta = document.getElementById('stickyCta');
+  if (!stickyCta) return;
+  document.body.classList.add('has-sticky-cta');
+  let shown = false;
+  function checkScroll() {
+    const scrolled = window.scrollY > 600;
+    if (scrolled && !shown) {
+      stickyCta.classList.add('visible');
+      shown = true;
+    } else if (!scrolled && shown) {
+      stickyCta.classList.remove('visible');
+      shown = false;
+    }
+  }
+  window.addEventListener('scroll', checkScroll, { passive: true });
+  checkScroll();
+}());
+
 // ── Email Capture ───────────────────────────────────────────────
 // SETUP: Create a free form at https://formspree.io (use your goldmangrains@gmail.com)
 //        Name it "Email Subscribers", then paste the form ID below.
