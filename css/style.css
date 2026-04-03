@@ -2000,3 +2000,24 @@ p  { color: var(--text-muted); }
     bottom: 60px !important;
   }
 }
+
+/* ============================================
+   MOTHER'S DAY BANNER
+   ============================================ */
+.mothers-day-bar {
+  background: #f9e4ef;
+  border-bottom: 1px solid #f0c0d8;
+  text-align: center;
+  padding: .6rem 1rem;
+  font-size: .88rem;
+  color: #7a2d4e;
+}
+.mothers-day-bar p { margin: 0; }
+.mothers-day-bar strong { font-weight: 700; }
+.mothers-day-bar a {
+  color: #7a2d4e;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-left: .25rem;
+}
+.mothers-day-bar a:hover { color: #4a1030; }

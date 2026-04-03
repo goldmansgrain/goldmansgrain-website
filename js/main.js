@@ -97,6 +97,12 @@ const PRODUCTS = {
     price: '$29.00',
     images: [
       'https://i.etsystatic.com/64682766/r/il/23fa13/7828100358/il_fullxfull.7828100358_a73h.jpg',
+      'https://i.etsystatic.com/64682766/r/il/d31d3b/7860638687/il_fullxfull.7860638687_ho3r.jpg',
+      'https://i.etsystatic.com/64682766/r/il/87747b/7812694348/il_fullxfull.7812694348_7ovc.jpg',
+      'https://i.etsystatic.com/64682766/r/il/89790e/7812694338/il_fullxfull.7812694338_kxio.jpg',
+      'https://i.etsystatic.com/64682766/r/il/c8c0bf/7860638671/il_fullxfull.7860638671_s6iw.jpg',
+      'https://i.etsystatic.com/64682766/r/il/c4da51/7860638673/il_fullxfull.7860638673_hgoo.jpg',
+      'https://i.etsystatic.com/64682766/r/il/47ae82/7832639194/il_fullxfull.7832639194_ds0a.jpg',
     ],
     description: 'Custom name gift for nursery or desk decor. Each block cut from solid hard maple with your choice of letters — a personalized keepsake that grows with them.\n\nMessage us with the letters or name you\'d like. Ships made to order.',
     specs: [
