@@ -30,7 +30,12 @@ const PRODUCTS = {
     material: 'Solid Walnut',
     price: '$29.00',
     images: [
+      'https://i.etsystatic.com/64682766/r/il/261984/7921952717/il_fullxfull.7921952717_sid7.jpg',
       'https://i.etsystatic.com/64682766/r/il/3a7581/7840054210/il_fullxfull.7840054210_au9e.jpg',
+      'https://i.etsystatic.com/64682766/r/il/735866/7840052180/il_fullxfull.7840052180_98da.jpg',
+      'https://i.etsystatic.com/64682766/r/il/4e6957/7840052334/il_fullxfull.7840052334_lxt7.jpg',
+      'https://i.etsystatic.com/64682766/r/il/feb7ff/7888003403/il_fullxfull.7888003403_e74g.jpg',
+      'https://i.etsystatic.com/64682766/r/il/2c0c20/7840052530/il_fullxfull.7840052530_6mgl.jpg',
     ],
     description: 'Montessori pretend play hardwood tools, intricately crafted from solid walnut. Because even the smallest hands deserve real wood tools.\n\nEvery piece is smooth, weighty, and sized right for little hands. No plastic, no shortcuts — just solid walnut, the way tools should feel.',
     specs: [
@@ -48,9 +53,10 @@ const PRODUCTS = {
     price: '$29.00',
     priceNote: 'Set of 5 — Chick, Fox, Frog, Koala, Hippo',
     images: [
+      'https://i.etsystatic.com/64682766/r/il/916e79/7873839662/il_fullxfull.7873839662_997o.jpg',
       'https://i.etsystatic.com/64682766/r/il/2b547f/7859011140/il_fullxfull.7859011140_441g.jpg',
-      'https://i.etsystatic.com/64682766/r/il/09b445/7902191379/il_fullxfull.7902191379_cu2d.jpg',
       'https://i.etsystatic.com/64682766/r/il/e9ccdc/7902191479/il_fullxfull.7902191479_opcr.jpg',
+      'https://i.etsystatic.com/64682766/r/il/09b445/7902191379/il_fullxfull.7902191379_cu2d.jpg',
     ],
     description: 'Five animals. Zero plastic. Just solid hardwood shaped into the creatures kids actually care about.\n\nIncludes a set of 5: Chick, Fox, Frog, Koala, and Hippo. Each figure cut from 100% solid hardwood — your choice of hard maple or dark walnut. Both are the same price because a good hippo shouldn\'t cost more in walnut.\n\nNo plywood. No paint. No mystery coating. Just real wood with a smooth finish that\'s safe for little hands and looks genuinely good on a nursery shelf.\n\nTwo toys in one — line them up on a shelf and they look like intentional décor. Hand them to a toddler and they become whatever story is happening right now.',
     specs: [
@@ -69,7 +75,12 @@ const PRODUCTS = {
     material: 'Solid Walnut + Maple',
     price: '$29.00',
     images: [
+      'https://i.etsystatic.com/64682766/r/il/f74ad3/7873928588/il_fullxfull.7873928588_oi6b.jpg',
       'https://i.etsystatic.com/64682766/r/il/39c912/7876038325/il_fullxfull.7876038325_pc74.jpg',
+      'https://i.etsystatic.com/64682766/r/il/45bd71/7734891132/il_fullxfull.7734891132_lsck.jpg',
+      'https://i.etsystatic.com/64682766/r/il/4c7c36/7782842691/il_fullxfull.7782842691_8ez3.jpg',
+      'https://i.etsystatic.com/64682766/r/il/0c586a/7782842701/il_fullxfull.7782842701_71k1.jpg',
+      'https://i.etsystatic.com/64682766/r/il/dde12c/7734891134/il_fullxfull.7734891134_8asb.jpg',
     ],
     description: 'Two contrasting hardwoods — no dyes, no mystery finishes. Just beautiful, weighty blocks kids and parents both love.\n\nMontessori sensory play at its simplest: rich walnut dark beside bright maple light, smooth edges, real weight. The kind of toy that teaches through texture and feel.',
     specs: [
@@ -120,7 +131,12 @@ const PRODUCTS = {
     material: 'Solid Walnut',
     price: '$32.00',
     images: [
-      'https://i.etsystatic.com/64682766/r/il/33dae8/7735979702/il_fullxfull.7735979702_ers3.jpg',
+      'https://i.etsystatic.com/64682766/r/il/625541/7870840346/il_fullxfull.7870840346_gkuu.jpg',
+      'https://i.etsystatic.com/64682766/r/il/377d45/7870840402/il_fullxfull.7870840402_disr.jpg',
+      'https://i.etsystatic.com/64682766/r/il/434bff/7735979706/il_fullxfull.7735979706_23d6.jpg',
+      'https://i.etsystatic.com/64682766/r/il/06bd2e/7735979708/il_fullxfull.7735979708_d9az.jpg',
+      'https://i.etsystatic.com/64682766/r/il/f04038/7870840466/il_fullxfull.7870840466_d5ru.jpg',
+      'https://i.etsystatic.com/64682766/r/il/f72ac4/7870840502/il_fullxfull.7870840502_giln.jpg',
     ],
     description: 'Luxury hardwood pedestal for your sink, counter, or display. The organizer that makes your whole kitchen look intentional.\n\nSolid walnut — no veneer, no shortcuts. The rich dark grain adds instant warmth to any kitchen or bathroom counter.',
     specs: [
@@ -227,6 +243,7 @@ const PRODUCTS = {
     material: 'Solid Maple · Solid Walnut',
     price: '$29.00',
     images: [
+      'https://i.etsystatic.com/64682766/r/il/929fe1/7921923691/il_fullxfull.7921923691_o44q.jpg',
       'https://i.etsystatic.com/64682766/r/il/367a2b/7867504886/il_fullxfull.7867504886_a0va.jpg',
       'https://i.etsystatic.com/64682766/r/il/f0290d/7915467733/il_fullxfull.7915467733_eizc.jpg',
       'https://i.etsystatic.com/64682766/r/il/472403/7867505080/il_fullxfull.7867505080_4arb.jpg',
